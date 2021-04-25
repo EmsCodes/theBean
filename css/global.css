@@ -1,0 +1,84 @@
+ 
+/* custom properties/css-variables */
+body{
+    margin:0;
+}
+h1{
+     font-family:'Limelight', Georgia, 'Times New Roman', Times, serif;
+ }
+main{
+     max-width:85%;
+     margin:0px auto;
+ }
+/* Developed mobile first */
+body{
+    font-family: 'Open Sans', verdana, 'Segoe UI',sans-serif;
+}
+
+/* header (logo, drop-down menu)*/
+header{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding-top:20px;
+}
+#logo{
+max-width:120px;
+max-height:40px;
+margin-left:2em;
+}
+
+nav{
+    font-size:1.5em;
+    font-style:bold;
+    font-weight:500;
+    position:absolute;
+    display:none;
+    right:0;
+    left:0;
+    top:2.8em;
+    padding-bottom:2em;
+    background: rgb(68,35,14);
+    background: linear-gradient(0deg, rgba(68,35,14,1) 13%, rgba(42,21,5,1) 78%);
+    border-top:2px solid #61310F;
+    animation: drop-down-menu 0.5s ease-in 1;
+}
+@keyframes drop-down-menu{
+    from{
+        top:0;
+    }
+    to{
+        top:2.8em;
+    }
+}
+nav ul li{
+    list-style-type:none;
+    margin-top:1.5em;
+    margin-left:30%;
+    animation: nav-delay-animation 1.5s ease-in-out;
+}
+@keyframes nav-delay-animation{
+    from{
+        opacity:0%;
+    }
+    to{
+        opacity:100%;
+    }
+}
+nav a{
+    color:#fff;
+    text-decoration: none;
+}
+#hamburger-menu {
+    display:none;
+}
+#hamburger-menu:checked ~ nav {
+    display:block;
+}
+
+.fa-bars{
+    font-size:1.8em;
+    color:#fff;
+    padding-top:5px;
+    margin-right:1em;
+}

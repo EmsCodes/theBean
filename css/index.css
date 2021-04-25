@@ -1,0 +1,80 @@
+main{
+    margin-top:5em;
+}
+#index-background-image{
+    background:url(/images/coffee-background.jpg) bottom left/cover no-repeat;
+    border-bottom: 2px solid #2A1505;
+}
+#index-bottom-background{
+    background:url(/images/index-bottom-background.jpg) center/cover no-repeat;
+}
+
+h1, h2, .index-cta{
+    text-align: center;
+    color:#fff;
+}
+
+h1{
+    font-size:1.9em;
+}
+h2{
+    font-size:1.4em;
+    font-style:italic;
+    font-weight:400;
+    margin-bottom:75px;
+}
+h3{
+    font-size:1.2em;
+    margin-top:0px;
+    padding-top:1em;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+/* index-cta, cta-animation and hover */
+.index-cta {
+    font-size:1.2em;
+    font-weight:600;
+    border:1px solid #fff;
+    text-decoration: none;
+    width:150px;
+    margin:0px auto;
+    padding:10px;
+    border-radius:2px;
+    animation: background-opacity-cta 4s ease-in-out infinite;
+    transition: "background-color" 1s ease-in-out;
+}
+.index-cta:hover{
+    background-color: #49654B;
+    animation-name:none;
+    border-color:#ffffff00;
+}
+@keyframes background-opacity-cta {
+    0%{
+        background-color:#00000050;
+    }
+    50%{
+        background-color:#00000090;
+    }
+    100%{
+        background-color:#00000050;
+    }
+}
+#index-cta-padding{
+    padding-bottom:75px;
+    text-decoration: none;
+}
+
+/* posts-carousel, arrows center part of page */
+
+.fa-chevron-left, .fa-chevron-right{
+    font-size:2em;
+    margin-bottom: 10em;
+}
+#carousel-arrows{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    gap:1.5em;
+}

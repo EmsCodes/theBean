@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content ="A pure coffee-blog. With lots of coffee knowledge, guides and answers to all your coffee questions">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/39e20b04f8.js"crossorigin="anonymous"></script>
+    <title>The Bean | Home</title> 
 </head>
 <body>
-    
+    <div id="index-background-image">
+        <header>
+            <a href="index.html">
+                <img src="images/thebean-logo.png" id="logo" 
+                alt="The Bean's logo. The bean written in white with a 
+                couple of coffeebeans next to it, and the words 
+                `Life begins after coffee underneath`">
+            </a>
+            <div class="dropdown-menu">
+                <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+                <input type="checkbox" id="hamburger-menu">
+                <nav>
+                    <ul>
+                        <li><a  href="index.html" class="active">Home</a></li>
+                        <li><a  href="posts.html">Posts</a></li>
+                        <li><a  href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <h1>Learn the secrets of coffee</h1>
+            <h2>Learn, make & drink</h2>
+            <div id="index-cta-padding">
+                <a href="posts.html" type="button">
+                    <div class="index-cta">
+                        Start learning!
+                    </div>
+                </a>
+            </div>
+            </div>
+            <div id="index-bottom-background">
+                <h3>Browse some of my posts</h3>
+                <div id="carousel-arrows">
+                    <i class="fas fa-chevron-left"></i>
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+                <div id="post-carousel">
+                    <div class="loader"></div>  
+                </div>
+            </div>
+        </main>
 </body>
 </html>
