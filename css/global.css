@@ -1,21 +1,31 @@
  
 /* custom properties/css-variables */
+
+:root{
+    --main-brown-color:#61310F;
+    --green-color:#3B543D;
+}
+
+/* Developed mobile first */
+
 body{
-    margin:0;
+    margin:0px auto;
 }
 h1{
-     font-family:'Limelight', Georgia, 'Times New Roman', Times, serif;
- }
+    font-family: 'Limelight', Times, serif;
+}
 main{
-     max-width:85%;
      margin:0px auto;
- }
-/* Developed mobile first */
+}
 body{
-    font-family: 'Open Sans', verdana, 'Segoe UI',sans-serif;
+    font-family: 'Open Sans', 'roboto', 'Segoe UI',sans-serif;
 }
 
 /* header (logo, drop-down menu)*/
+#header-background-image{
+    background:url(/images/coffee-background.jpg) center/cover no-repeat;
+    padding-bottom:0.8em;
+}
 header{
     display:flex;
     flex-direction: row;
@@ -41,7 +51,7 @@ nav{
     background: rgb(68,35,14);
     background: linear-gradient(0deg, rgba(68,35,14,1) 13%, rgba(42,21,5,1) 78%);
     border-top:2px solid #61310F;
-    animation: drop-down-menu 0.5s ease-in 1;
+    animation: drop-down-menu 0.2s ease-in 1;
 }
 @keyframes drop-down-menu{
     from{
@@ -55,7 +65,7 @@ nav ul li{
     list-style-type:none;
     margin-top:1.5em;
     margin-left:30%;
-    animation: nav-delay-animation 1.5s ease-in-out;
+    animation: nav-delay-animation 1s ease-in-out;
 }
 @keyframes nav-delay-animation{
     from{

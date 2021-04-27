@@ -6,16 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content ="A pure coffee-blog. With lots of coffee knowledge, guides and answers to all your coffee questions">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">  
     <link href="css/global.css" rel="stylesheet">
     <link href="css/about.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/39e20b04f8.js"crossorigin="anonymous"></script>
     <title>The Bean | Home</title> 
 </head>
 <body>
-    <header>
+    <header id="header-background-image">
         <a href="index.html">
             <img src="images/thebean-logo.png" id="logo" 
             alt="The Bean's logo. The bean written in white with a 
@@ -25,7 +23,7 @@
         <div class="dropdown-menu">
             <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
             <input type="checkbox" id="hamburger-menu">
-            <nav>
+            <nav aria-label="Main">
                 <ul>
                     <li><a  href="index.html" class="active">Home</a></li>
                     <li><a  href="posts.html">Posts</a></li>
@@ -34,6 +32,91 @@
             </nav>
         </div>
     </header>
-    
+    <main>
+        <div class="content-width">
+            <h1>About the Blog</h1>
+            <h2>The Blogger</h2>
+            <blockquote>
+                <p>"I believe humans get a lot done, not because we’re smart, but because we have 
+                    thumbs so we can make coffee."
+                </p>
+                <p class="bold-text"> - Flash Rosenberg</p>
+            </blockquote>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                diam nonumy eirmod tempor invidunt ut labore et dolore 
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                diam nonumy eirmod tempor invidunt ut labore et dolore 
+            </p>
+            <img id="blogger-image" src="images/closeup-berries.jpg" alt="Two green cappuccino cups with beautiful latte art pattern, standing on a dark wooden table">
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                diam nonumy eirmod tempor invidunt ut labore et dolore 
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                diam nonumy eirmod tempor invidunt ut labore et dolore 
+            </p>
+        </div>
+        <section>
+            <img id="cappuccino-image" src="images/cappuccino.jpg" alt="Two green cappuccino cups with beautiful latte art pattern, standing on a dark wooden table">
+            <div class="content-width">
+                <h2>The Blogging</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                    diam nonumy eirmod tempor invidunt ut labore et dolore 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                    diam nonumy eirmod tempor invidunt ut labore et dolore 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                    diam nonumy eirmod tempor invidunt ut labore et dolore 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore 
+                    diam nonumy eirmod tempor invidunt ut labore et dolore 
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h4>
+            Get notified of new posts!
+        </h4>
+        <label for="email">Your email:</label>
+        <input type="email" id="email"/>
+        <button type="submit">Subscribe</button>
+        <div id="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+        <a href="index.html">
+            <img src="images/dark-logo.png" id="logo" 
+            alt="The Bean's logo. The bean written in white with a 
+            couple of coffeebeans next to it, and the words 
+            `Life begins after coffee underneath`">
+        </a>
+        <div id="footer-nav" role="navigation" aria-label="footer">
+            <ul>
+                <li><a href="contact.html">Contact me</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="posts.html">Blog posts</a></li>
+            </ul>
+        </div>
+        <p><a></a>    
+    </footer>
 </body>
 </html>
