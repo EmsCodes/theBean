@@ -1,15 +1,21 @@
 h1{
     font-size:1.7em;
     margin-top:1.5em;
+    font-weight: 100;
 }
 h2{
+    font-family: var(--serif-font);
     font-size: 1.4em;
-    font-weight:400;
+    font-weight:500;
+    color:var(--subheading-color);
 }
 section{
     background-color:var(--main-brown-color);
     color:#fff;
     padding-bottom:2em;
+}
+section h2{
+    color:#fff;
 }
 .content-width{
     max-width:85%;
@@ -17,13 +23,14 @@ section{
     margin-bottom:2.5em;
 }
 blockquote{
+    font-size: 1.1em;
+    font-family: var(--serif-font);
     color:var(--green-color);
-    text-align: start;
     font-style:italic;
     border-left:2px solid var(--main-brown-color);
     padding-left:1.5em;
     margin:0px auto;
-    margin-bottom:2.5em;
+    margin-bottom:3em;
     margin-top:2.5em;
 }
 .bold-text{

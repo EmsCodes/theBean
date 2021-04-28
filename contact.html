@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content ="A pure coffee-blog. With lots of coffee knowledge, guides and answers to all your coffee questions">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=Cormorant+SC:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/39e20b04f8.js"crossorigin="anonymous"></script>
     <title>The Bean | Home</title> 
 </head>
 <body>
-    <header>
+    <header id="header-background-image">
         <a href="index.html">
             <img src="images/thebean-logo.png" id="logo" 
             alt="The Bean's logo. The bean written in white with a 
@@ -25,10 +28,26 @@
                     <li><a  href="index.html" class="active">Home</a></li>
                     <li><a  href="posts.html">Posts</a></li>
                     <li><a  href="about.html">About</a></li>
+                    <li><a  href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    
+    <main>
+        <fieldset>
+            <legend><h1>Contact me</h1></legend>
+            <form action="submit.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject" id="subject">
+                <label for="message">Message:</label>
+                <textarea name="message" id="message"></textarea>
+                <button class="form-cta" type="submit">Send message</button>
+            </form>
+        </fieldset>
+    </main>
 </body>
 </html>
