@@ -10,7 +10,7 @@
     <link href="css/global.css" rel="stylesheet">
     <link href="css/about.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/39e20b04f8.js"crossorigin="anonymous"></script>
-    <title>The Bean | Home</title> 
+    <title>The Bean | About</title> 
 </head>
 <body>
     <header id="header-background-image">
@@ -93,29 +93,37 @@
         </section>
     </main>
     <footer>
-        <h4>
-            Get notified of new posts!
-        </h4>
-        <label for="email">Your email:</label>
-        <input type="email" id="email"/>
-        <button type="submit">Subscribe</button>
-        <div id="social-icons">
-            <i class="fab fa-facebook"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-twitter"></i>
-        </div>
-        <a href="index.html">
-            <img src="images/dark-logo.png" id="logo" 
-            alt="The Bean's logo. The bean written in white with a 
-            couple of coffeebeans next to it, and the words 
-            `Life begins after coffee underneath`">
-        </a>
-        <div id="footer-nav" role="navigation" aria-label="footer">
-            <ul>
-                <li><a href="contact.html">Contact me</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="posts.html">Blog posts</a></li>
-            </ul>
+        <div id="footer-container">
+            <div class="footer-email-form">
+                <h4>
+                    Get notified of new posts!
+                </h4>
+                <form action="submit.php" method="POST">
+                    <label for="email">Your email:</label>
+                    <input type="email" id="email"/>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div id="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html">
+                    <img src="images/dark-logo.png" id="footer-logo" 
+                    alt="The Bean's logo. The bean written in white with a 
+                    couple of coffeebeans next to it, and the words 
+                    `Life begins after coffee underneath`">
+                </a>
+                <div id="footer-nav" role="navigation" aria-label="footer">
+                    <ul>
+                        <li><a href="contact.html">Contact me</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="posts.html">Blog posts</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <p><a></a>    
     </footer>

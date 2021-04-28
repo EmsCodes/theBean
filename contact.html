@@ -35,19 +35,54 @@
     </header>
     <main>
         <fieldset>
-            <legend><h1>Contact me</h1></legend>
+            <legend><h1>Contact</h1></legend>
             <form action="submit.php" method="POST">
                 <label for="name">Name:</label>
-                <input type="text" name="name" id="name">
+                <input class="contact-form-input" type="text" name="name" id="name">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email">
+                <input class="contact-form-input" type="email" name="email" id="email">
                 <label for="subject">Subject:</label>
-                <input type="text" name="subject" id="subject">
+                <input class="contact-form-input" type="text" name="subject" id="subject">
                 <label for="message">Message:</label>
                 <textarea name="message" id="message"></textarea>
-                <button class="form-cta" type="submit">Send message</button>
+                <button class="cta" type="submit">Send message</button>
             </form>
         </fieldset>
     </main>
+    <footer>
+        <div id="footer-container">
+            <div class="footer-email-form">
+                <h4>
+                    Get notified of new posts!
+                </h4>
+                <form action="submit.php" method="POST">
+                    <label for="email">Your email:</label>
+                    <input type="email" id="email"/>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div id="social-icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html">
+                    <img src="images/dark-logo.png" id="footer-logo" 
+                    alt="The Bean's logo. The bean written in white with a 
+                    couple of coffeebeans next to it, and the words 
+                    `Life begins after coffee underneath`">
+                </a>
+                <div id="footer-nav" role="navigation" aria-label="footer">
+                    <ul>
+                        <li><a href="contact.html">Contact me</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="posts.html">Blog posts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p><a></a>    
+    </footer>
 </body>
 </html>

@@ -31,11 +31,7 @@ fieldset{
     margin:0px auto;
     padding:20px 30px;
 }
-/* label::after{
-    content:"";
-    display:block;
-} */
-input[type=text], input[type=email]{
+.contact-form-input{
     width:85%;
 }
 .form-cta:hover{
@@ -48,7 +44,7 @@ input[type=text], input[type=email]{
     border:none;
     color:#fff;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
 }
 textarea{
     height:125px;
