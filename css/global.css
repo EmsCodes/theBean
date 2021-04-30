@@ -1,18 +1,21 @@
- 
+ /* Developed mobile first */
+
 /* custom properties/css-variables */
 
 :root{
     --main-brown-color:#61310F;
+    --dark-brown-color:#130a03;
     --green-color:#3B543D;
+    --brown-linear-gradient:linear-gradient(0deg, rgba(68,35,14,1) 13%, rgba(42,21,5,1) 78%);
     --main-font:'Antonio',tahoma, sans-serif;
     --serif-font:'Cormorant SC', georgia, serif;
     --subheading-color:#252525;
 }
 
-/* Developed mobile first */
-
+/* headings/body/main*/
 body{
     margin:0px auto;
+    font-family: 'Open Sans', 'roboto', 'Segoe UI',sans-serif;
 }
 h1{
     font-family: var(--main-font);
@@ -20,30 +23,29 @@ h1{
 main{
      margin:0px auto;
 }
-body{
-    font-family: 'Open Sans', 'roboto', 'Segoe UI',sans-serif;
-}
-
 /* header (logo, drop-down menu) CTA*/
+
 #header-background-image{
     background:url(/images/coffee-background.jpg) center/cover no-repeat;
     padding-bottom:10px;
 }
 header{
+    position:static;
+    z-index: 1;
     display:flex;
     flex-direction: row;
     justify-content:space-between;
     padding-top:15px;
 }
 #logo{
-max-width:130px;
+max-width:135px;
 height:40px;
-margin-left:2em;
+margin-left:40px;
+padding-top:5px;
 }
-
 nav{
     font-family: var(--main-font);
-    font-size:1.7em;
+    font-size:1.5em;
     font-weight:100;
     position:absolute;
     display:none;
@@ -51,9 +53,7 @@ nav{
     left:0;
     top:70px;
     padding-bottom:35px;
-    background: rgb(68,35,14);
-    background: linear-gradient(0deg, rgba(68,35,14,1) 13%, rgba(42,21,5,1) 78%);
-    border-top:2px solid #61310F;
+    background: var(--brown-linear-gradient);
     animation: drop-down-menu 0.2s ease-in 1;
 }
 @keyframes drop-down-menu{
@@ -66,8 +66,8 @@ nav{
 }
 nav ul li{
     list-style-type:none;
-    margin-top:30px;
-    margin-left:10%;
+    margin-top:40px;
+    margin-left:20%;
     animation: nav-delay-animation 1s ease-in-out;
 }
 @keyframes nav-delay-animation{
@@ -79,8 +79,12 @@ nav ul li{
     }
 }
 nav a{
-    color:#fff;
+    color:rgba(255, 255, 255, 0.741);
     text-decoration: none;
+}
+.active{
+    border-bottom:2px solid #fff;
+    color:#fff;
 }
 #hamburger-menu {
     display:none;
@@ -88,12 +92,11 @@ nav a{
 #hamburger-menu:checked ~ nav {
     display:block;
 }
-
 .fa-bars{
     font-size:1.8em;
     color:#fff;
-    padding-top:5px;
-    margin-right:1em;
+    padding-top:10px;
+    margin-right:35px;
 }
 /* CTA */
 
@@ -115,8 +118,10 @@ nav a{
 
 /* Footer */
 footer h4{
-    font-size:1.3em;
-    text-align: center;
+    font-size:1.1em;
+    /* text-align: center; */
+    font-weight:600;
+    margin-top:35px;
 }
 footer{
     max-width:90%;
@@ -124,8 +129,8 @@ footer{
 }
 #footer-container{
     display:flex;
-    flex-flow: row-reverse wrap;
-    justify-content: center;
+    flex-flow: column;
+    justify-items:center;
 }
 #footer-nav{
     font-weight:100;
@@ -144,6 +149,9 @@ footer{
 #footer-logo{
     max-width:145px;
     height:55px;
+}
+.footer-email-form, .footer-nav{
+    margin:0px auto;
 }
 form{
     margin:0px auto;
@@ -175,4 +183,40 @@ footer button:hover{
     padding:5px;
     margin-top:25px;
     margin-bottom:25px;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width:500px){
+    nav{
+        font-size:1.8em;
+        left:50%;
+        top:60px;
+    }
+    @keyframes drop-down-menu{
+        from{
+            top:-250px;
+        }
+        to{
+            top:50px;
+        }
+    }
+}
+@media (min-width:600px){
+    #logo{
+        max-width:152px;
+        height:45px;
+        }
+    .fa-bars{
+        font-size:2.2em;
+        padding-top:10px;
+        margin-right:35px;
+    }    
+}
+@media (min-width:700px){
+    nav{
+        font-size:1.8em;
+        left:60%;
+        top:60px;
+    }
 }

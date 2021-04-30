@@ -1,35 +1,37 @@
 main{
-    margin-top:100px;
+    margin-top:80px;
 }
 #index-background-image{
-    background:url(/images/coffee-background.jpg) bottom left/cover no-repeat;
+    background:url(/images/coffee-background.jpg) left center/cover no-repeat;
 }
 #index-bottom-background{
-    background:url(/images/index-bottom-background.jpg) center/cover no-repeat;
+    background:url(/images/index-bottom-background.jpg) 80%/cover no-repeat;
 }
-
+h1{
+    font-size:1.9em;
+    font-weight: 800;
+    width:65%;
+}
 h1, h2, .index-cta{
     text-align: center;
     color:#fff;
-}
-
-h1{
-    font-size:2.2em;
-    font-weight: 800;
+    margin:0px auto;
 }
 h2{
     font-family:var(--serif-font);
-    font-size:1.5em;
+    font-size:1.3em;
     font-weight:400;
+    font-style:italic;
+    margin-top:5px;
     margin-bottom:75px;
 }
 h3{
     font-family: var(--main-font);
     font-size:1.3em;
     margin-top:0px;
-    padding-top:1em;
+    padding-top:35px;
     text-align: center;
-    font-weight:600;
+    font-weight:800;
 }
 a{
     text-decoration: none;
@@ -38,7 +40,7 @@ a{
 .index-cta {
     font-family: var(--main-font);
     font-size:1.1em;
-    font-weight:600;
+    font-weight:200;
     border:1px solid #fff;
     text-decoration: none;
     width:150px;
@@ -47,6 +49,7 @@ a{
     border-radius:2px;
     animation: background-opacity-cta 4s ease-in-out infinite;
     transition: "background-color" 1s ease-in-out;
+    box-shadow: 3px 3px 15px rgb(0, 0, 0);
 }
 .index-cta:hover{
     background-color: var(--green-color);
@@ -55,9 +58,9 @@ a{
     transform:scale(1.05);
 }
 .cta{
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom:75px;
-    width:35%;
+    box-shadow: 3px 3px 15px #000;
 }
 .center-align{
     text-align: center;
@@ -83,6 +86,7 @@ a{
 .fa-chevron-left, .fa-chevron-right{
     font-size:1.8em;
     margin-bottom: 10em;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.494);
 }
 .fa-chevron-left:hover, .fa-chevron-right:hover{
     color:var(--green-color);
@@ -94,3 +98,71 @@ a{
     justify-content: center;
     gap:1.5em;
 }
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width:500px){
+    h1{
+        font-size:2.2em;
+        width:55%;
+    }
+    h2{
+        font-size:1.5em;
+    }
+    h3{
+        font-size:1.4em;
+    }
+    /* index-cta, cta-animation and hover */
+    .index-cta {
+        font-size:1.2em;
+        width:165px;
+    }
+    .fa-chevron-left, .fa-chevron-right{
+        font-size:2.5em;
+        margin-bottom: 10em;
+    }
+}
+/* @media only screen and (min-width:650px){
+    h1{
+        width:50%;
+    }
+} */
+@media only screen and (min-width:700px){
+    h1{
+        font-size:2.4em;
+        width:40%;
+    }
+    h2{
+        font-size:1.8em;
+    }
+    h3{
+        font-size:1.5em;
+    }
+    /* index-cta */
+    .index-cta {
+        font-size:1.3em;
+    }
+}
+@media only screen and (min-width:980px){
+    #index-background-image{
+        background:url(/images/coffee-background.jpg) bottom/cover no-repeat;
+    }
+    #index-bottom-background{
+        background:url(/images/index-bottom-background.jpg) 90%/cover no-repeat;
+    }
+    h1{
+        font-size:2.6em;
+        width:30%;
+    }
+    h2{
+        font-size:1.9em;
+        margin-bottom:60px;
+    }
+    h3{
+        font-size:1.5em;
+    }
+    /* index-cta */
+    .index-cta {
+        font-size:1.4em;
+    }
+}    
