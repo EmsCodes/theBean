@@ -35,6 +35,7 @@ h3{
 }
 h4{
     font-family:var(--main-font);
+    width:85%;
     font-size:1.3em;
     color:#fff;
     text-align: center;

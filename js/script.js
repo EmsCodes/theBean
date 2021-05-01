@@ -2,9 +2,6 @@ const url = "https://makra-stenkloev.no/thebean/wp-json/wp/v2/posts?_embed";
 
 const carouselContainer = document.querySelector("#posts-carousel");
 
-// const blogPostsContainer = document.querySelector(".posts-container");
-
-
 async function fetchPosts(){
 
     try{
@@ -17,14 +14,11 @@ async function fetchPosts(){
         console.log(json);
 
         carouselContainer.innerHTML = "";
-        // blogPostsContainer.innerHTML = "";
 
         for(let i = 0; i < posts.length; i++){
 
             const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].source_url;
             const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;
-
-            console.log(featuredImage);
 
             // for index.html
             
@@ -36,17 +30,6 @@ async function fetchPosts(){
                     <p>read></p>
                 </div>
             </a>`;
-
-            // for posts.html
-
-            // blogPostsContainer.innerHTML += 
-            // `<a href="specific-post.html?id="${posts[i].id}">
-            //     <div class="post-container">
-            //         <div class="featured-image" style="background-image:url(${featuredImage})" alt="${altImageText}"></div>
-            //         <h4>${posts[i].title.rendered}</h4>
-            //         <p>read></p>
-            //     </div>
-            // </a>`;
         }
         
     }
@@ -58,3 +41,25 @@ async function fetchPosts(){
 
 fetchPosts();
 
+
+// function blogListHtml(posts){
+
+//     for(let i = 0; i < posts.length; i++){
+
+//         const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].source_url;
+//         const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;
+
+//         console.log(featuredImage);
+
+//         // for posts.html
+
+//         blogPostsContainer.innerHTML += 
+//         `<a href="specific-post.html?id="${posts[i].id}">
+//             <div class="list-container">
+//                 <div class="list-featured-image" style="background-image:url(${featuredImage})" alt="${altImageText}"></div>
+//                 <h4>${posts[i].title.rendered}</h4>
+//                 <p>read></p>
+//             </div>
+//         </a>`;
+//     }
+// }
