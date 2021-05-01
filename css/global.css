@@ -117,7 +117,7 @@ nav a{
 }
 
 /* Footer */
-footer h4{
+footer h5{
     font-size:1.1em;
     /* text-align: center; */
     font-weight:600;
@@ -220,3 +220,4 @@ footer button:hover{
         top:60px;
     }
 }
+@media (min-width:700px){

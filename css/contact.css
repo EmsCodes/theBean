@@ -34,18 +34,6 @@ fieldset{
 .contact-form-input{
     width:85%;
 }
-.form-cta:hover{
-    background-color:var(--green-color);
-}
-.form-cta{
-    margin-top:50px;
-    padding:15px;
-    background-color:var(--main-brown-color);
-    border:none;
-    color:#fff;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
 textarea{
     height:125px;
     width:100%;   

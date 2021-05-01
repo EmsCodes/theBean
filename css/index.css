@@ -33,6 +33,15 @@ h3{
     text-align: center;
     font-weight:800;
 }
+h4{
+    font-family:var(--main-font);
+    font-size:1.3em;
+    color:#fff;
+    text-align: center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:7.5px 10px;
+}
 a{
     text-decoration: none;
 }
@@ -83,9 +92,42 @@ a{
 
 /* posts-carousel, arrows center part of page */
 
+#posts-carousel{
+    width:90%;
+    display:flex;
+    flex-flow:row nowrap;
+    margin:0px auto;
+    margin-top:25px;
+    gap: 20px;
+}
+#posts-carousel p{
+    font-family: var(--serif-font);
+    color:#fff;
+    text-align: end;
+    margin-top:5px;
+    margin-right:12px;
+
+}
+.post-container{
+    width:125px;
+    height:225px;
+    margin:0px auto;
+    background-color:var(--green-color);
+}
+.featured-image{
+    width: 100%;
+	height:55%;
+	background-position: center;
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+/* API images */
+/* figure img {
+    max-width:100vw;
+    height:auto;
+} */
 .fa-chevron-left, .fa-chevron-right{
     font-size:1.8em;
-    margin-bottom: 10em;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.494);
 }
 .fa-chevron-left:hover, .fa-chevron-right:hover{
@@ -165,4 +207,4 @@ a{
     .index-cta {
         font-size:1.4em;
     }
-}    
+}
