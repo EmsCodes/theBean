@@ -35,7 +35,6 @@ async function fetchPosts(){
     }
     catch(error){
         console.log(error);
-        
     }
 }
 

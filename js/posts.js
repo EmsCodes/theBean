@@ -26,9 +26,9 @@ async function fetchPosts(){
                 <div class="post-container">
                     <div class="featured-image" style="background-image:url(${featuredImage})" alt="${altImageText}"></div>
                     <div class="container-text-width">
-                        <h4>${posts[i].title.rendered}</h4>
+                        <h3>${posts[i].title.rendered}</h3>
                         <p class="date">(${posts[i].date})</p>
-                        <p class="description">${posts[i].excerpt.rendered}</p>
+                        <div class="description">${posts[i].excerpt.rendered}</div>
                         <p class="read-link">read></p>
                     </div>
                 </div>
