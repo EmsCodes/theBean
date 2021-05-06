@@ -22,7 +22,7 @@
                 `Life begins after coffee underneath`">
             </a>
             <div class="dropdown-menu">
-                <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+                <label type="button" for="hamburger-menu"><i tabindex="0" class="fas fa-bars"></i></label>
                 <input type="checkbox" id="hamburger-menu">
                 <nav aria-label="Main">
                     <ul>
@@ -48,8 +48,8 @@
             <div id="index-bottom-background">
                 <h3>Latest posts</h3>
                 <div id="carousel-arrows">
-                    <i class="fas fa-chevron-left"></i>
-                    <i class="fas fa-chevron-right"></i>
+                    <i type="button" aria-label="left-carousel-arrow" class="fas fa-chevron-left"></i>
+                    <i  tabindex="0" type="button" aria-label="right-carousel-arrow" class="fas fa-chevron-right"></i>
                 </div>
                 <div id="posts-carousel">
                     <div class="loader"></div>  
@@ -96,6 +96,7 @@
         </div>
         <p><a></a>    
     </footer>
+    <script src="js/global.js"></script>
     <script src="js/script.js"></script>
 </body>
 

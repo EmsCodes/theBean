@@ -1,6 +1,7 @@
 const url = "https://makra-stenkloev.no/thebean/wp-json/wp/v2/posts?_embed";
 
 const blogPostsContainer = document.querySelector(".blog-list-container");
+const morePostsButton = document.querySelector("#more-button");
 
 
 async function fetchPosts(){
@@ -14,16 +15,70 @@ async function fetchPosts(){
 
         console.log(json);
 
-        for(let i = 0; i < posts.length; i++){
+        createHtml(posts);
 
-            const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].source_url;
-            const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;
+        // for(let i = 0; i < posts.length; i++){
 
-            // for posts.html
+
+        //     const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].source_url;
+        //     const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;
+
+        //     // gives every other object either brown or green background-color
+        //     if(i % 2 === 0){
+
+        //         blogPostsContainer.innerHTML += 
+        //         `<a href="specific-post.html?id="${posts[i].id}">
+        //             <div class="brown-post-container">
+        //                 <div class="featured-image" style="background-image:url(${featuredImage})" alt="${altImageText}"></div>
+        //                 <div class="container-text-width">
+        //                     <h3>${posts[i].title.rendered}</h3>
+        //                     <p class="date">(${posts[i].date})</p>
+        //                     <div class="description">${posts[i].excerpt.rendered}</div>
+        //                     <p class="read-link">read></p>
+        //                 </div>
+        //             </div>
+        //         </a>`;
+        //     } 
+        //     else { blogPostsContainer.innerHTML += 
+        //         `<a href="specific-post.html?id="${posts[i].id}">
+        //             <div class="green-post-container">
+        //                 <div class="featured-image" style="background-image:url(${featuredImage})" alt="${altImageText}"></div>
+        //                 <div class="container-text-width">
+        //                     <h3>${posts[i].title.rendered}</h3>
+        //                     <p class="date">(${posts[i].date})</p>
+        //                     <div class="description">${posts[i].excerpt.rendered}</div>
+        //                     <p class="read-link">read></p>
+        //                 </div>
+        //             </div>
+        //         </a>`;
+        //         }
             
-            blogPostsContainer.innerHTML += 
+        //     // Stops the loop when reaching 10 posts    
+        //     if(i === 2){
+        //         break;
+        //     }
+        // }
+    }
+    catch(error){
+        console.log(error);
+        
+    }
+
+}
+
+fetchPosts();
+
+
+function createHtml(posts){
+    for(let i = 0; i < posts.length; i++){
+
+
+        const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].source_url;
+        const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;
+
+        blogPostsContainer.innerHTML += 
             `<a href="specific-post.html?id="${posts[i].id}">
-                <div class="post-container">
+                <div class="brown-post-container">
                     <div class="featured-image" style="background-image:url(${featuredImage})" alt="${altImageText}"></div>
                     <div class="container-text-width">
                         <h3>${posts[i].title.rendered}</h3>
@@ -33,13 +88,20 @@ async function fetchPosts(){
                     </div>
                 </div>
             </a>`;
-            }
         
-    }
-    catch(error){
-        console.log(error);
-        
+
+        // gives every other object green background-color
+        if(i % 2 === 0){
+
+            const testing1 = document.querySelectorAll(".brown-post-container");
+    
+            testing1.forEach(function() {
+
+               testing1[i].style.backgroundColor = "#3B543D";
+
+            });
+            
+        };
+
     }
 }
-
-fetchPosts();

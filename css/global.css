@@ -6,10 +6,13 @@
     --main-brown-color:#61310F;
     --dark-brown-color:#130a03;
     --green-color:#3B543D;
+    --subheading-color:#252525;
     --brown-linear-gradient:linear-gradient(0deg, rgba(68,35,14,1) 13%, rgba(42,21,5,1) 78%);
+    --box-shadow:3px 3px 15px rgb(0, 0, 0);
+
     --main-font:'Antonio',tahoma, sans-serif;
     --serif-font:'Cormorant SC', georgia, serif;
-    --subheading-color:#252525;
+
 }
 
 /* headings/body/main*/
@@ -220,4 +223,4 @@ footer button:hover{
         top:60px;
     }
 }
-@media (min-width:700px){
+@media (min-width:700px){};
