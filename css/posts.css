@@ -100,6 +100,10 @@ h3{
 }
 @media only screen and (min-width:900px){
 
+    .blog-list-container{
+        width:100%;
+    }
+
     .brown-post-container{
         max-width:33.3vw;
         padding-bottom:0px;
