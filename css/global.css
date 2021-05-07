@@ -6,7 +6,7 @@
     --main-brown-color:#61310F;
     --dark-brown-color:#130a03;
     --green-color:#3B543D;
-    --subheading-color:#252525;
+    --subheading-color:#414141;
     --brown-linear-gradient:linear-gradient(0deg, rgba(68,35,14,1) 13%, rgba(42,21,5,1) 78%);
     --box-shadow:3px 3px 15px rgb(0, 0, 0);
 
@@ -22,10 +22,9 @@ body{
 }
 h1{
     font-family: var(--main-font);
+    font-size:1.9em;
 }
-main{
-     margin:0px auto;
-}
+
 /* header (logo, drop-down menu) CTA*/
 
 #header-background-image{
@@ -41,10 +40,10 @@ header{
     padding-top:15px;
 }
 #logo{
-max-width:135px;
-height:40px;
-margin-left:40px;
-padding-top:5px;
+    max-width:135px;
+    height:40px;
+    margin-left:40px;
+    padding-top:5px;
 }
 nav{
     font-family: var(--main-font);
@@ -82,12 +81,11 @@ nav ul li{
     }
 }
 nav a{
-    color:rgba(255, 255, 255, 0.741);
+    color:#fff;
     text-decoration: none;
 }
 .active{
     border-bottom:2px solid #fff;
-    color:#fff;
 }
 #hamburger-menu {
     display:none;
@@ -101,6 +99,14 @@ nav a{
     padding-top:10px;
     margin-right:35px;
 }
+header .fab {
+    display:none;
+    color:#fff;
+    font-size: 1.4em;
+    padding:5px;
+    margin-bottom:25px;
+}
+
 /* CTA */
 
 .cta:hover{
@@ -118,6 +124,8 @@ nav a{
     cursor: pointer;
     transition: all 0.2s ease;
 }
+
+
 
 /* Footer */
 footer h5{
@@ -177,10 +185,12 @@ footer button{
 footer button:hover{
     background-color:var(--green-color);
 }
+
+/* Social Icons */
 #social-icons {
     text-align: center;
 }
-.fab{
+footer .fab{
     color:var(--green-color);
     font-size: 1.7em;
     padding:5px;
@@ -223,4 +233,49 @@ footer button:hover{
         top:60px;
     }
 }
-@media (min-width:700px){};
+@media (min-width:1150px){
+    header{
+        position:sticky;
+        padding-top:0px;
+        justify-content:space-between;
+        padding-top:20px;
+    }
+    #header-background-image{
+        background:url(/images/coffee-background.jpg) 10% 15%/cover no-repeat;
+        padding-bottom:5px;
+    }
+    #menu-and-icons{
+        margin-right:5%;
+    }
+    nav{
+        font-size:1.4em;
+        position:static;
+        display:inline-block;
+        background: none;
+        top:0px;
+        padding-bottom:0px;
+    }
+    nav ul li{
+        display:inline;
+        margin-left:0px;
+        margin-right:20px;
+    }
+    nav ul li:hover{
+        text-decoration: underline #fff;
+    }
+    .active{
+        text-decoration: none;
+    }
+    nav ul{
+        margin-top:0px;
+    }
+    .fa-bars{
+        display:none;
+    }
+    header .fab {
+        display:inline-block;
+    }
+    header .fab:hover{
+        transform:scale(1.05);
+    }
+};

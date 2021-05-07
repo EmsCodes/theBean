@@ -8,29 +8,75 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;300;400;500;600;700&family=Cormorant+SC:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">    
     <link href="css/global.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/specific-post.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/39e20b04f8.js"crossorigin="anonymous"></script>
     <title>The Bean | Blog-post</title> 
 </head>
 <body>
-    <header>
+    <header id="header-background-image">
         <a href="index.html">
             <img src="images/thebean-logo.png" id="logo" 
             alt="The Bean's logo. The bean written in white with a 
             couple of coffeebeans next to it, and the words 
             `Life begins after coffee underneath`">
         </a>
-        <div class="dropdown-menu">
-            <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+        <div id="menu-and-icons">
+            <label type="button" for="hamburger-menu"><i tabindex="0" class="fas fa-bars"></i></label>
             <input type="checkbox" id="hamburger-menu">
             <nav aria-label="Main">
                 <ul>
                     <li><a  href="index.html" class="active">Home</a></li>
                     <li><a  href="posts.html">Posts</a></li>
                     <li><a  href="about.html">About</a></li>
+                    <li><a  href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <a href="https://www.facebook.com/" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
     </header>
+    <main>
+        <div id="chosen-post-container">
+            <div class="loader"></div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-container">
+            <div class="footer-email-form">
+                <h5>
+                    Get notified of new posts!
+                </h5>
+                <form action="submit.php" method="POST">
+                    <label for="email">Your email:</label>
+                    <input type="email" id="email"/>
+                    <button type="submit">Subscribe</button>
+                </form>
+                <div id="social-icons">
+                    <a href="https://www.facebook.com/" aria-label="facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <a href="index.html">
+                    <img src="images/dark-logo.png" id="footer-logo" 
+                    alt="The Bean's logo. The bean written in white with a 
+                    couple of coffeebeans next to it, and the words 
+                    `Life begins after coffee underneath`">
+                </a>
+                <div id="footer-nav" role="navigation" aria-label="footer">
+                    <ul>
+                        <li><a href="contact.html">Contact me</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="posts.html">Blog posts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p><a></a>    
+    </footer>
+    <script src="js/global.js"></script>
+    <script src="js/specific-post.js"></script>
 </body>
 </html>

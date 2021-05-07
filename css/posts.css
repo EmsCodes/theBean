@@ -17,7 +17,7 @@ a{
      text-align: center;
 } 
 .top-text-width{
-    border-bottom:1px solid var(--green-color);
+    border-bottom:2px solid var(--green-color);
     padding-bottom:25px;
 }
 /* Blogpost-container/posts */
@@ -100,10 +100,6 @@ h3{
 }
 @media only screen and (min-width:900px){
 
-    .blog-list-container{
-        width:100%;
-    }
-
     .brown-post-container{
         max-width:33.3vw;
         padding-bottom:0px;
@@ -111,5 +107,16 @@ h3{
     .top-text-width{
         max-width: 50%;
         margin-left:10%;
+    }
+}
+
+@media only screen and (min-width:900px){
+    main{
+        max-width:85%;
+        margin:0px auto;
+    }
+    .brown-post-container{
+        max-width:25vw;
+        padding-bottom:0px;
     }
 }

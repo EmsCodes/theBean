@@ -100,6 +100,10 @@ function createHtml(posts){
                testing1[i].style.backgroundColor = "#3B543D";
 
             });
+         
+        if(posts[i] === 9){
+            break;
+        }    
             
         };
 

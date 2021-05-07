@@ -18,17 +18,16 @@ async function fetchPosts(){
 
         for(let i = 0; i < posts.length; i++){
 
-            console.log(carouselContainer);
-
             const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].source_url;
-            const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;  
+            const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;
+            
 
             if(i<=3){
 
             leftArrow.style.display = "none";
             
             carouselContainer.innerHTML += 
-                `<a href="specific-post.html?id="${posts[i].id}">
+                `<a href="specific-post.html?id=${posts[i].id}">
                     <div class="post-container">
                         <div class="featured-image" style="background-image:url(${featuredImage})" alt="${altImageText}"></div>
                         <h4>${posts[i].title.rendered}</h4>
@@ -72,7 +71,7 @@ rightArrow.addEventListener("click", async function(){
             rightArrow.style.display = "none";
 
             carouselContainer.innerHTML += 
-                `<a href="specific-post.html?id="${posts[i].id}">
+                `<a href="specific-post.html?id=${posts[i].id}">
                     <div class="post-container">
                         <div class="featured-image" style="background-image:url(${featuredImage})" alt="${altImageText}"></div>
                         <h4>${posts[i].title.rendered}</h4>
