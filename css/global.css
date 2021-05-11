@@ -28,8 +28,7 @@ h1{
 /* header (logo, drop-down menu) CTA*/
 
 #header-background-image{
-    background:url(/images/coffee-background.jpg) center/cover no-repeat;
-    padding-bottom:10px;
+    background:url(/images/background-bigger-screen.jpg) 10% 65%/cover no-repeat;
 }
 header{
     position:static;
@@ -101,10 +100,6 @@ nav a{
 }
 header .fab {
     display:none;
-    color:#fff;
-    font-size: 1.4em;
-    padding:5px;
-    margin-bottom:25px;
 }
 
 /* CTA */
@@ -240,31 +235,28 @@ footer .fab{
         justify-content:space-between;
         padding-top:20px;
     }
-    #header-background-image{
-        background:url(/images/coffee-background.jpg) 10% 15%/cover no-repeat;
-        padding-bottom:5px;
-    }
     #menu-and-icons{
-        margin-right:5%;
+        margin-right:5%;   
+    }
+    input{
+        display: none;   
+    }
+    #logo{
+        max-width:170px;
+        height:55px;
     }
     nav{
         font-size:1.4em;
         position:static;
         display:inline-block;
         background: none;
-        top:0px;
         padding-bottom:0px;
+        padding-top:10px;
     }
     nav ul li{
         display:inline;
         margin-left:0px;
         margin-right:20px;
-    }
-    nav ul li:hover{
-        text-decoration: underline #fff;
-    }
-    .active{
-        text-decoration: none;
     }
     nav ul{
         margin-top:0px;
@@ -274,6 +266,10 @@ footer .fab{
     }
     header .fab {
         display:inline-block;
+        color:#fff;
+        font-size: 1.4em;
+        padding:5px;
+        margin-bottom:25px;
     }
     header .fab:hover{
         transform:scale(1.05);

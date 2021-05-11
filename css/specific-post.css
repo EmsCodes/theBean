@@ -1,4 +1,7 @@
-
+main{
+ max-width:850px;
+ margin:0px auto;
+}
 h1{
     margin-top:35px;
     margin-left:10%;
@@ -23,11 +26,13 @@ h3{
     font-weight:bold;
     color:var(--subheading-color);
 }
-.post-content img {
-    width:100%;
+.wp-block-image img {
+    max-width:100%;
     height:auto;
     margin-top:25px;
-}
+    margin-bottom:15px;
+    cursor:pointer;
+}    
 .post-content{
     max-width:85%;
     margin:0px auto;
@@ -37,10 +42,70 @@ h3{
 }
 .featured-image{
     width: 100%;
-    max-width:1280px;
+    max-width:750px;
     margin:0px auto;
 	height:200px;
 	background-position: center;
 	background-size: cover;
     background-repeat: no-repeat;
+}
+
+/* Image modal for post-images */
+.post-image-modal{
+    position:fixed;
+    width: 80vw;
+	height:35vh;
+    margin-left:10vw;
+    margin-top:50%;
+	background-position: center;
+	background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+.image-modal{
+    background-color: rgba(0, 0, 0, 0.768);
+    position: fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:99;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width:500px){
+
+    .post-image-modal{
+        margin-top:35%;
+        height:50vh;
+    }
+
+}
+@media only screen and (min-width:750px){
+
+    .post-image-modal{
+        max-width:850px;
+        margin-top:15%;
+        height:65vh;
+    }
+
+}
+@media only screen and (min-width:1000px){
+
+    .post-image-modal{
+        max-width:50vw;
+        margin-top:20vh;
+        margin-left:25vw;
+        height:65vh;
+    }
+}
+@media only screen and (min-width:1300px){
+
+    .post-image-modal{
+        max-width:50vw;
+        margin-top:15vh;
+        margin-left:25vw;
+        height:65vh;
+    }
 }

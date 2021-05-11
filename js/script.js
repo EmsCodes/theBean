@@ -78,7 +78,6 @@ rightArrow.addEventListener("click", async function(){
                         <p class="read-link">read></p>
                     </div>
                 </a>`;
-                console.log(i)  
             }
         }
     }   

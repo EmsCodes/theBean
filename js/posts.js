@@ -93,11 +93,11 @@ function createHtml(posts){
         // gives every other object green background-color
         if(i % 2 === 0){
 
-            const testing1 = document.querySelectorAll(".brown-post-container");
+            const blogPostBackground = document.querySelectorAll(".brown-post-container");
     
-            testing1.forEach(function() {
+            blogPostBackground.forEach(function() {
 
-               testing1[i].style.backgroundColor = "#3B543D";
+                blogPostBackground[i].style.backgroundColor = "#3B543D";
 
             });
          

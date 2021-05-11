@@ -5,7 +5,10 @@
 const burgerMenu = document.querySelector(".fa-bars");
 const burgerLabel = document.querySelector("#hamburger-menu");
 
-function dropDownMenu(){
+function dropDownMenu(){      
+    
+    console.log("hello");
+    
 
     burgerLabel.classList.toggle("#hamburger-menu:checked~nav");
 
@@ -13,4 +16,4 @@ function dropDownMenu(){
 
 burgerMenu.addEventListener("click", dropDownMenu);
 
-burgerMenu.onkeyup = dropDownMenu;
+burgerMenu.addEventListener("keyup", dropDownMenu);
