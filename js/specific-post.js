@@ -21,6 +21,10 @@ async function fetchPost(){
 
         const featuredImage = posts._embedded["wp:featuredmedia"][0].source_url;
         const altImageText = posts._embedded["wp:featuredmedia"][0].alt_text;
+
+
+
+        //creates the HTML/content based on the ID of the post the user have chosen
         
         postContainer.innerHTML += 
         `<div class="blog-post">
@@ -36,43 +40,43 @@ async function fetchPost(){
         const modalContainer = document.querySelector("#modal-container");
 
         
+        //Creates an Image modal when the user clicks any of the images in the chosen post
 
         for(let i=0; i<modalImage.length; i++){
 
-            console.log(modalImage[i]);
+            //variable for the modal HTML
+            const modalHtml = 
+            `<div class="image-modal"></div>
+             <div>
+                <div class="post-image-modal" style="background-image:url(${modalImage[i].childNodes[0].src})">
+                    <i tabindex="0" class="fas fa-times"></i>
+                </div>
+            </div>`
 
+            //adding tabIndex to post images for accessibility
+            modalImage[i].tabIndex="0";
             
             modalImage[i].addEventListener("click", function(){
 
-                console.log(modalImage[i].childNodes[0].src);
-
-                modalContainer.innerHTML += 
-                `<div class="image-modal">
-                    <a href="specific-post.html?id=${posts.id}"><i class="fas fa-times"></i></a>
-                    <div class="post-image-modal" style="background-image:url(${modalImage[i].childNodes[0].src})"></div>
-                </div>`
+                modalContainer.innerHTML += modalHtml;
 
             });
 
             modalImage[i].onkeyup = function(){
 
-                modalContainer.innerHTML += 
-                `<div class="image-modal">
-                <a><i class="fas fa-times"></i></a>
-                <div class="post-image-modal" style="background-image:url(${modalImage[i].childNodes[0].src})"></div>
-                </div>`
+                modalContainer.innerHTML += modalHtml;
             };
+
+            //Closes the modal when clicked outside
 
             document.addEventListener("click", function(event){
 
-                if(event.target.closest(".image-modal")){
+                if(event.target.closest(".image-modal") || event.target.matches(".fa-times")){
 
-                    modalContainer.innerHTML = "";
+                    modalContainer.innerHTML = ""; 
 
                 }
-
             })
-            
         }
         
     }

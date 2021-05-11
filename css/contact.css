@@ -32,9 +32,48 @@ fieldset{
     padding:20px 30px;
 }
 .contact-form-input{
+    font-size:1em;
     width:85%;
 }
 textarea{
     height:125px;
     width:100%;   
+}
+
+/* Media Queries */
+
+@media only screen and (min-width:500px){
+
+    fieldset{
+        max-width:50%;
+    }
+
+}
+@media only screen and (min-width:700px){
+
+    fieldset{
+        max-width:35%;
+    }
+
+}
+@media only screen and (min-width:1000px){
+
+    fieldset{
+        width:25%;
+        max-width:400px;
+    }
+    main::before{
+        background-position: 90%;
+    }
+}
+@media only screen and (min-width:1200px){
+
+    fieldset{
+        width:25%;
+        max-width:350px;
+    }
+    main::before{
+        background-position: 50%;
+    }
+
 }
