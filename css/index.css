@@ -99,9 +99,6 @@ a{
     margin-bottom:75px;
     box-shadow: 3px 3px 15px #000;
 }
-.center-align{
-    text-align: center;
-}
 @keyframes background-opacity-cta {
     0%{
         background-color:#00000050;
@@ -145,6 +142,9 @@ a{
     text-align: right;
     right:0;
 }
+.fa-chevron-left{
+    display:none;
+}
 .fa-chevron-left, .fa-chevron-right{
     cursor: pointer;
     font-size:1.8em;
@@ -154,9 +154,6 @@ a{
 .fa-chevron-left:hover, .fa-chevron-right:hover{
     color:var(--green-color);
     transform:scale(1.1);
-}
-.fa-chevron-left{
-    display:none;
 }
 #carousel-arrows{
     display:flex;

@@ -59,6 +59,9 @@ function mainHtml(){
                 </a>
             </div>
         </div>`
+        
+    }else{
+        console.log("Nope!");
     }
 }
 

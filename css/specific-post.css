@@ -51,11 +51,15 @@ h3{
 }
 
 /* Image modal for post-images */
+#modal-container{
+    max-width:85%;
+    margin:0px auto;
+}
 .post-image-modal{
     position:fixed;
     width: 80vw;
-	height:35vh;
-    margin-left:10vw;
+    max-width:850px;
+    height:35vh;
     margin-top:35%;
 	background-position: center;
 	background-size: contain;
@@ -94,10 +98,7 @@ h3{
 @media only screen and (min-width:850px){
 
     .post-image-modal{
-        top:10%;
-        right:0;
-        bottom:0;
-        left:0;
+        top:15%;
     }
 }
 @media only screen and (min-width:1600px){

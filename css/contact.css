@@ -60,6 +60,7 @@ span{
     font-family: var(--serif-font);
     font-weight: 700;
     font-style: italic;
+    font-size: 1.2em;
 }
 
 /* Media Queries */

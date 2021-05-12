@@ -23,7 +23,6 @@ async function fetchPost(){
         const altImageText = posts._embedded["wp:featuredmedia"][0].alt_text;
 
 
-
         //creates the HTML/content based on the ID of the post the user have chosen
         
         postContainer.innerHTML += 

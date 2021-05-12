@@ -77,7 +77,7 @@ function createHtml(posts){
         const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;
 
         blogPostsContainer.innerHTML += 
-            `<a href="specific-post.html?id="${posts[i].id}">
+            `<a href="specific-post.html?id=${posts[i].id}">
                 <div class="brown-post-container">
                     <div class="featured-image" style="background-image:url(${featuredImage})" alt="${altImageText}"></div>
                     <div class="container-text-width">
