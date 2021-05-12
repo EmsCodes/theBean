@@ -39,15 +39,19 @@
     <main>
         <fieldset>
             <legend><h1>Contact</h1></legend>
-            <form action="submit.php" method="POST">
+            <form id="contact-form" action="submit.php" method="POST">
                 <label for="name">Name:</label>
                 <input class="contact-form-input" type="text" name="name" id="name">
+                <div class="form-error" id="name-error">Please enter your name (minimum 5 characters</div>
                 <label for="email">Email:</label>
                 <input class="contact-form-input" type="email" name="email" id="email">
+                <div class="form-error" id="email-error">Please enter a valid email address</div>
                 <label for="subject">Subject:</label>
                 <input class="contact-form-input" type="text" name="subject" id="subject">
+                <div class="form-error" id="subject-error">Subject required (minimum 15 characters)</div>
                 <label for="message">Message:</label>
                 <textarea name="message" id="message"></textarea>
+                <div class="form-error" id="message-error">Message required (minimum 25 characters)</div>
                 <button class="cta" type="submit">Send message</button>
             </form>
         </fieldset>
@@ -87,5 +91,7 @@
         </div>
         <p><a></a>    
     </footer>
+    <script src="js/global.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>

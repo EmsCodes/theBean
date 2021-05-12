@@ -25,6 +25,10 @@ h1{
     font-size:1.9em;
 }
 
+.center-align{
+    text-align: center;
+}
+
 /* header (logo, drop-down menu) CTA*/
 
 #header-background-image{
