@@ -10,8 +10,8 @@
     --brown-linear-gradient:linear-gradient(0deg, rgba(68,35,14,1) 13%, rgba(42,21,5,1) 78%);
     --box-shadow:3px 3px 15px rgb(0, 0, 0);
 
-    --main-font:'Antonio',tahoma, sans-serif;
-    --serif-font:'Cormorant SC', georgia, serif;
+    --main-font:'Antonio', tahoma, sans-serif;
+    --serif-font:'Monsieur La Doulaise', georgia, serif;
 
 }
 
@@ -24,7 +24,14 @@ h1{
     font-family: var(--main-font);
     font-size:1.9em;
 }
-
+.read-link{
+    font-family: var(--serif-font);
+    font-size:1.8em;
+    color:#fff;
+    text-align: right;
+    margin-right:25px;
+    margin-top:0px;
+} 
 .center-align{
     text-align: center;
 }
@@ -88,7 +95,10 @@ nav a{
     text-decoration: none;
 }
 .active{
-    border-bottom:2px solid #fff;
+    border-bottom:1px solid #fff;
+}
+.active:hover{
+    border:none;
 }
 #hamburger-menu {
     display:none;
@@ -124,7 +134,48 @@ header .fab {
     transition: all 0.2s ease;
 }
 
+/* Error message and loader animation */
+.error {
+    font-size:1.2em;
+    border: 1px solid rgb(82, 0, 0);
+    color: rgb(255, 255, 255);;
+    background: rgba(170, 0, 0, 0.898);
+    padding: 1em;
+    width:200px;
+    margin:0px auto;
+}
+.loader {
+    position: absolute;
+    left:48%;
+    bottom:50%;
+    border:1px solid var(--green-color);
+    border-radius:50%;
+    width:20px;
+    height:20px;
+    animation: grow 2s ease-in-out infinite;
+}
+/* The middle loading-ring */
 
+.fa-mug-hot{
+    color:var(--green-color);
+    font-size: 10px;
+    position:absolute;
+    left:5px;
+    top:4px;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0.1);
+    }
+    50% {
+        transform: scale(2.5);
+    }
+    100%{
+        transform: scale(0.1);
+        opacity:75%;
+    }
+}
 
 /* Footer */
 footer h5{
@@ -257,6 +308,11 @@ footer .fab{
         display:inline;
         margin-left:0px;
         margin-right:20px;
+        border:1px solid rgba(255, 255, 255, 0);
+        padding:4px;
+    }
+    nav ul li:hover{
+        border:1px solid rgb(255, 255, 255);
     }
     nav ul{
         margin-top:0px;

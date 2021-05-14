@@ -2,7 +2,7 @@
 const form = document.querySelector("#contact-form");
 const fullName = document.querySelector("#name");
 const nameError = document.querySelector("#name-error");
-const message = document.querySelector("#message");
+const contactMessage = document.querySelector("#message");
 const messageError = document.querySelector("#message-error");
 const subject = document.querySelector("#subject");
 const subjectError = document.querySelector("#subject-error");
@@ -20,7 +20,7 @@ function validateForm(event){
     else{
         nameError.style.display = "block";
     }
-    if(checkLength(message.value, 25)){
+    if(checkLength(contactMessage.value, 25)){
         messageError.style.display = "none";
     }
     else{
@@ -46,7 +46,7 @@ function mainHtml(){
 
     const mainContent = document.querySelector("main"); 
 
-    if(checkLength(fullName.value, 5) && checkLength(message.value, 25) && checkLength(subject.value, 15) && emailValidation(email.value) === true){
+    if(checkLength(fullName.value, 5) && checkLength(contactMessage.value, 25) && checkLength(subject.value, 15) && emailValidation(email.value) === true){
     
         mainContent.innerHTML = 
         `<div id="message-response-text">

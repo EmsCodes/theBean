@@ -14,29 +14,27 @@ async function fetchPosts(){
 
         const posts = json;
 
+        leftArrow.style.display = "none";
         carouselContainer.innerHTML = "";
 
         for(let i = 0; i < posts.length; i++){
+            
 
             const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].source_url;
             const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;
-            
+
 
             if(i<=3){
-
-            leftArrow.style.display = "none";
             
             carouselContainer.innerHTML += 
                 `<a href="specific-post.html?id=${posts[i].id}">
                     <div class="post-container">
                         <div class="featured-image" style="background-image:url(${featuredImage})" alt="${altImageText}"></div>
                         <h4>${posts[i].title.rendered}</h4>
-                        <div class="read-link">
-                            <p>read></p>
-                        </div>    
+                        <p class="read-link">read></p> 
                     </div>
                 </a>`;    
-            } 
+            }    
         }
          
     }   
@@ -62,7 +60,7 @@ rightArrow.addEventListener("click", async function(){
 
         for(let i = 0; i < posts.length; i++){
 
-            const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].source_url;
+            const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
             const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;  
 
             if((i>=4) && (i<=7)){
@@ -99,7 +97,7 @@ leftArrow.addEventListener("click", async function(){
 
         for(let i = 0; i < posts.length; i++){
 
-            const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].source_url;
+            const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
             const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;  
 
             if(i<=3){

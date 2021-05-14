@@ -1,7 +1,3 @@
-body{
-    max-width:1500px;
-    background-color:rgb(255, 255, 255);
-}
 main{
     margin-top:80px;
 }
@@ -38,7 +34,7 @@ h1, h2, .index-cta{
 }
 h2{
     font-family:var(--serif-font);
-    font-size:1.3em;
+    font-size:2em;
     font-weight:400;
     font-style:italic;
     margin-top:5px;
@@ -56,7 +52,7 @@ h3{
 }
 h4{
     font-family:var(--main-font);
-    width:85%;
+    max-width:75%;
     font-size:1.3em;
     color:#fff;
     text-align: center;
@@ -67,9 +63,6 @@ a{
     text-decoration: none;
 }
 /* index-cta, cta-animation and hover */
-#logo{
-    background-color:#130a0385;
-}
 .index-cta {
     font-family: var(--main-font);
     font-size:1.1em;
@@ -130,17 +123,10 @@ a{
 }
 .featured-image{
     width: 100%;
-	height:60%;
-	background-position: center;
+	height:50%;
+	background-position: center top;
 	background-size: cover;
     background-repeat: no-repeat;
-}
-.read-link{
-    font-style: italic;
-    font-weight:200;
-    color:#fff;
-    text-align: right;
-    right:0;
 }
 .fa-chevron-left{
     display:none;
@@ -247,6 +233,10 @@ a{
 @media only screen and (min-width:1150px){
     main{
         margin-top:150px;
+    }
+    #logo{
+        background-color:#130a039e;
+        border-radius: 2px;
     }
     #index-cta-padding{
         padding-bottom:250px;

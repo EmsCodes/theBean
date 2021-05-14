@@ -1,3 +1,13 @@
+
+function errorMessage(error, message = "Error") {
+    return `<div class="error" id="error"${error}">${message}</div>`;
+}
+
+function checkForUndefined(property){
+    if(!property){
+        return true;
+ }
+}
 // dropdown burger menu function
 
 // get rid of checkbox hack?????????????
@@ -17,3 +27,4 @@ function dropDownMenu(){
 burgerMenu.addEventListener("click", dropDownMenu);
 
 burgerMenu.addEventListener("keyup", dropDownMenu);
+
