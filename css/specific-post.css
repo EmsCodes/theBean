@@ -8,13 +8,16 @@ h1{
     margin-bottom:0px;
 }
 h2{
-    font-family:var(--serif-font);
+    font-family:var(--main-font);
     font-size:1.5em;
     font-weight:bold;
     margin-top:50px;
+    text-decoration: underline;
 }
 h3{
-    font-size: 1.1em;
+    
+    font-family: var(--serif-font);
+    font-size: 2em;
     font-weight:bold;
     color:var(--subheading-color);
 }
@@ -30,7 +33,7 @@ h3{
     margin:0px auto;
 }
 .post-content p{
-    padding-top:10px;
+    padding-top:0px;
 }
 .featured-image{
     width: 100%;

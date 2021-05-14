@@ -7,10 +7,11 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 
-// const url = "https://makra-stenkloev.no/thebean/wp-json/wp/v2/posts/" + id + "?_embed";
+const url = "https://makra-stenkloev.no/thebean/wp-json/wp/v2/posts/" + id + "?_embed";
 
 async function fetchPost(){
 
+    postContainer.innerHTML="";
 
     try{
 
