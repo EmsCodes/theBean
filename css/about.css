@@ -9,7 +9,7 @@ h1{
 }
 h2{
     font-family: var(--serif-font);
-    font-size: 1.7em;
+    font-size: 2.5em;
     font-weight:500;
     color:var(--subheading-color);
 }
@@ -27,9 +27,9 @@ section h2, section p{
     margin-bottom:2.5em;
 }
 blockquote{
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 2em;
     font-family: var(--serif-font);
+    font-weight: bold;
     font-style:italic;
     border-left:2px solid var(--main-brown-color);
     color:var(--green-color);
