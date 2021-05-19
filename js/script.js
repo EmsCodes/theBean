@@ -27,6 +27,7 @@ async function fetchPosts(){
             let altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;
             let postTitle = posts[i].title.rendered;
 
+            // error handling if elements are missing
             if(checkForUndefined(postTitle)){
                 postTitle = "Title Missing";
             }

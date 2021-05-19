@@ -26,7 +26,7 @@ h1{
     font-size:2.4em;
     color:#fff;
     font-weight: 800;
-    width:75%;
+    width:80%;
 }
 h1, h2, h3, h4, .index-cta{
     text-align: center;
@@ -60,6 +60,12 @@ h4{
 }
 a{
     text-decoration: none;
+}
+.burger-menu-container{
+    padding-top:5px;
+}
+.burger-checked{
+    padding-top:5px;
 }
 /* index-cta, cta-animation and hover */
 .index-cta {
@@ -108,13 +114,13 @@ a{
 /* posts-carousel, carousel icons  */
 
 #posts-carousel{
-    max-width:85%;
+    max-width:80%;
     display:grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     margin:0px auto;
     margin-top:10px;
-    gap:30px;
+    gap:15px;
 }
 .post-container{
     max-width:175px;
@@ -247,6 +253,7 @@ a{
     h4{
         width:65%;
         height:20%;
+        font-size:1.4em;
     }
     /* index-cta */
     .index-cta {
@@ -256,16 +263,16 @@ a{
         margin-bottom:25px;
     }
     #posts-carousel{
-        max-width:90%;
+        max-width:85%;
         display:grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 100%;
         justify-content: center;
         margin:0px auto;
-        column-gap: 30px;
+        row-gap:15px;
     }
     .post-container{
-        max-width:250px;
+        max-width:200px;
         height:275px;
         background-color:var(--green-color);
         margin-top:10px;
@@ -290,6 +297,9 @@ a{
     h3{
         font-size:2.6em;
     }
+    h4{
+       font-size:1.6em;
+    }
     #logo{
         background-color:#130a039e;
         border-radius: 2px;
@@ -301,13 +311,13 @@ a{
         background:url(/images/background-big-screen-cropped.jpg) 45%/cover no-repeat;
     }
     #posts-carousel{
-        max-width:65%;
-        display:grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 100%;
-        justify-content: center;
-        margin:0px auto;
-        column-gap: 30px;
+        width:85%;
+        max-width:1000px;
+        row-gap: 25px;
+    }
+    .post-container{
+        max-width:225px;
+        height:300px;
     }
     #index-bottom-background::before{
         background: url(/images/index-bottom-background.jpg) center/cover no-repeat;

@@ -6,7 +6,7 @@
     --main-brown-color:#61310F;
     --dark-brown-color:#130a03;
     --green-color:#3B543D;
-    --subheading-color:#414141;
+    --subheading-color:#373737;
     --brown-linear-gradient:linear-gradient(0deg, rgba(68,35,14,1) 13%, rgba(42,21,5,1) 78%);
     --box-shadow:3px 3px 15px rgb(0, 0, 0);
 
@@ -98,11 +98,31 @@ nav a{
 #hamburger-menu:checked ~ nav { 
     display:block;
 }
-.fa-bars{
-    font-size:1.8em;
-    color:#fff;
-    padding-top:10px;
+/* burger-menu */
+.burger-menu-container{
     margin-right:35px;
+    transition: 0.5s;
+}
+.burger-checked{
+    margin-right:25px;
+}
+.bar1, .bar2, .bar3{
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    margin-top: 7px;
+    border-radius: 3px;
+    cursor:pointer;
+    transition: 0.5s;
+}
+.checked-bar1{
+    transform: rotate(-45deg) translate(-14px);
+}
+.checked-bar3{
+    transform: rotate(45deg) translate(-14px);
+}
+.checked-bar2{
+    opacity: 0%;
 }
 header .fab {
     display:none;
@@ -181,7 +201,7 @@ header .fab {
 }
 
 /* Footer */
-footer h5{
+footer h5, footer h4 {
     font-size:1.1em;
     font-weight:600;
     margin-top:35px;
@@ -205,6 +225,13 @@ footer{
     color:#000;
     text-align: start;
 }
+#footer-nav ul li{
+    border:1px solid rgba(0, 0, 0, 0);
+    padding:2px;
+}
+#footer-nav ul li:hover{
+    border-color: #000;
+}
 #footer-nav a{
     color:#000;
     text-decoration: none;
@@ -218,6 +245,7 @@ footer{
 }
 form{
     margin:0px auto;
+    color:var(--subheading-color);
 }
 label::after{
     content:"";
@@ -237,7 +265,12 @@ footer button{
 footer button:hover{
     background-color:var(--green-color);
 }
-
+#footer-copyright{
+    text-align: center;
+    margin-top:25px;
+    margin-bottom:25px;
+    color:var(--subheading-color);
+}
 /* Social Icons */
 #social-icons {
     text-align: center;
@@ -275,12 +308,33 @@ footer .fab{
         max-width:152px;
         height:45px;
         }
-    .fa-bars{
-        font-size:2.2em;
-        padding-top:10px;
-        margin-right:35px;
-    }    
 }
+@media (min-width:700px){
+    /* FOOTER*/
+    #footer-container{
+        display:flex;
+        flex-flow: row-reverse;
+        margin-top:50px;
+    }
+    footer{
+        width:75%;
+        max-width:750px;
+        margin:0px auto;
+    }
+    footer .fab{
+        font-size: 1.8em;
+    }
+    footer h5, footer h4 {
+        font-size:1.5em;
+    }
+    #footer-nav{
+        font-size:1.5em;
+    }
+    form{
+        font-size:1.2em;
+        font-weight: 300;
+    }
+}    
 @media (min-width:1150px){
     header{
         position:sticky;
@@ -328,5 +382,9 @@ footer .fab{
     }
     header .fab:hover{
         transform:scale(1.05);
+    }
+    footer{
+        width:50%;
+        max-width:750px;
     }
 };
