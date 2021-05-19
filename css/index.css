@@ -7,7 +7,7 @@ main{
 #index-bottom-background{
     position:relative;
 }
-h3, .fa-chevron-left, .fa-chevron-right,#posts-carousel, .cta{
+h3, .fa-chevron-circle-left, .fa-chevron-circle-right ,#posts-carousel, .cta{
     position: relative;
     z-index: 2;
 }
@@ -23,40 +23,39 @@ h3, .fa-chevron-left, .fa-chevron-right,#posts-carousel, .cta{
     z-index: 1;
 }
 h1{
-    font-size:1.9em;
-    font-weight: 800;
-    width:65%;
-}
-h1, h2, .index-cta{
-    text-align: center;
+    font-size:2.4em;
     color:#fff;
+    font-weight: 800;
+    width:75%;
+}
+h1, h2, h3, h4, .index-cta{
+    text-align: center;
     margin:0px auto;
 }
 h2{
     font-family:var(--serif-font);
-    font-size:2em;
+    color:rgb(220, 220, 220);
+    font-size:2.3em;
     font-weight:400;
-    font-style:italic;
-    margin-top:5px;
+    text-transform: capitalize;
+    margin-top:10px;
     margin-bottom:75px;
 }
 h3{
     font-family: var(--main-font);
     position: relative;
     font-size:1.6em;
-    margin:0px auto;
     margin-top:0px;
     padding:20px;
     font-weight:800;
-    text-align: center;
+    text-transform: capitalize;
 }
 h4{
     font-family:var(--main-font);
-    max-width:75%;
-    font-size:1.3em;
     color:#fff;
-    text-align: center;
-    margin:0px auto;
+    max-width:85%;
+    height:10%;
+    font-size:1.3em;
     margin-top:10px;
 }
 a{
@@ -65,17 +64,30 @@ a{
 /* index-cta, cta-animation and hover */
 .index-cta {
     font-family: var(--main-font);
+    color:#fff;
     font-size:1.1em;
     font-weight:200;
     border:1px solid #fff;
     text-decoration: none;
     width:150px;
-    margin:0px auto;
     padding:10px;
     border-radius:2px;
     animation: background-opacity-cta 4s ease-in-out infinite;
     transition: "background-color" 1s ease-in-out;
     box-shadow: var(--box-shadow);
+}
+
+/* index CTA animation */
+@keyframes background-opacity-cta {
+    0%{
+        background-color:#0000009e;
+    }
+    50%{
+        background-color:var(--green-color);
+    }
+    100%{
+        background-color:#0000009e;
+    }
 }
 .index-cta:hover{
     background-color: var(--green-color);
@@ -92,19 +104,8 @@ a{
     margin-bottom:75px;
     box-shadow: 3px 3px 15px #000;
 }
-@keyframes background-opacity-cta {
-    0%{
-        background-color:#00000050;
-    }
-    50%{
-        background-color:#000000bb;
-    }
-    100%{
-        background-color:#00000050;
-    }
-}
 
-/* posts-carousel, arrows center part of page */
+/* posts-carousel, carousel icons  */
 
 #posts-carousel{
     max-width:85%;
@@ -120,6 +121,10 @@ a{
     height:225px;
     background-color:var(--green-color);
     box-shadow: var(--box-shadow);
+    transition:all 0.2s ease-in-out;
+}
+.post-container:hover{
+    transform: scale(1.05);
 }
 .featured-image{
     width: 100%;
@@ -128,38 +133,64 @@ a{
 	background-size: cover;
     background-repeat: no-repeat;
 }
-.fa-chevron-left{
-    display:none;
-}
-.fa-chevron-left, .fa-chevron-right{
+.fa-chevron-circle-left, .fa-chevron-circle-right{
+    color:rgb(28, 28, 28);
     cursor: pointer;
-    font-size:1.8em;
+    font-size: 3em;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.494);
-    margin-bottom:20px;
 }
-.fa-chevron-left:hover, .fa-chevron-right:hover{
+.fa-chevron-circle-left:hover, .fa-chevron-circle-right:hover{
     color:var(--green-color);
     transform:scale(1.1);
 }
 #carousel-arrows{
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+}
+#left-carousel-button, #right-carousel-button{
+    position:relative;
+    z-index: 2;
+    background: none;
+    border:none;
+    margin-bottom:15px;
+}
+#left-carousel-button{
+    display:none;
+}
+/* read-link */
+.read-link{
+    font-family: var(--serif-font);
+    font-size:2.2em;
+    font-style:italic;
+    font-weight: 200;
+    color:rgb(220, 220, 220);
+    text-align: right;
+    margin-right:15px;
+    margin-bottom:15px;
 }
 /* MEDIA QUERIES */
-
+@media only screen and (min-width:390px){
+    h4{
+        width:70%;
+        margin-top:15px;
+    }
+}
 @media only screen and (min-width:500px){
     h1{
-        font-size:2.2em;
-        width:55%;
+        font-size:3em;
+        width:65%;
     }
     h2{
-        font-size:1.5em;
+        font-size:2.5em;
     }
     h3{
-        font-size:1.8em;
+        font-size:2em;
     }
-    /* index-cta, cta-animation and hover */
+    h4{
+        width:70%;
+        margin-top:15px;
+    }
     .index-cta {
         font-size:1.2em;
         width:165px;
@@ -184,11 +215,14 @@ a{
 } */
 @media only screen and (min-width:700px){
     h1{
-        font-size:2.4em;
-        width:40%;
+        font-size:3.5em;
+        width:65%;
     }
     h2{
-        font-size:1.8em;
+        font-size:3.2em;
+    }
+    h3{
+        font-size:2em;
     }
     /* index-cta */
     .index-cta {
@@ -200,12 +234,19 @@ a{
 }
 @media only screen and (min-width:800px){
     h1{
-        font-size:2.6em;
-        width:45%;
+        font-size:3.8em;
+        width:50%;
     }
     h2{
-        font-size:1.9em;
+        font-size:3.5em;
         margin-bottom:60px;
+    }
+    h3{
+        font-size:2.3em;
+    }
+    h4{
+        width:65%;
+        height:20%;
     }
     /* index-cta */
     .index-cta {
@@ -215,7 +256,7 @@ a{
         margin-bottom:25px;
     }
     #posts-carousel{
-        max-width:85%;
+        max-width:90%;
         display:grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 100%;
@@ -229,10 +270,25 @@ a{
         background-color:var(--green-color);
         margin-top:10px;
     }
+    /* read-link */
+    .read-link{
+        margin-top:20px;
+    }
 }
 @media only screen and (min-width:1150px){
     main{
         margin-top:150px;
+    }
+    h1{
+        font-size:4.5em;
+        width:45%;
+    }
+    h2{
+        font-size:3.5em;
+        margin-bottom:60px;
+    }
+    h3{
+        font-size:2.6em;
     }
     #logo{
         background-color:#130a039e;
@@ -242,7 +298,7 @@ a{
         padding-bottom:250px;
     }
     #index-background-image{
-        background:url(/images/background-big-screen-cropped.jpg) 10%/cover no-repeat;
+        background:url(/images/background-big-screen-cropped.jpg) 45%/cover no-repeat;
     }
     #posts-carousel{
         max-width:65%;
@@ -255,5 +311,10 @@ a{
     }
     #index-bottom-background::before{
         background: url(/images/index-bottom-background.jpg) center/cover no-repeat;
+    }
+}
+@media only screen and (min-width:1600px){
+    h1{
+        width:35%;
     }
 }

@@ -35,9 +35,9 @@
                 `Life begins after coffee underneath`">
             </a>
             <div id="menu-and-icons">
-                <label for="hamburger-menu"><i tabindex="0" class="fas fa-bars"></i></label>
+                <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
                 <input type="checkbox" id="hamburger-menu" role="navigation">
-                <nav aria-label="Main">
+                <nav aria-label="Main navigation">
                     <ul>
                         <li><a  href="index.html" class="active">Home</a></li>
                         <li><a  href="posts.html">Posts</a></li>
@@ -62,10 +62,14 @@
             </div>
     </div>
             <div id="index-bottom-background">
-                <h3>Latest posts</h3>
+                <h3>Browse latest posts</h3>
                 <div id="carousel-arrows">
-                    <a tabindex="0"><i type="button" aria-label="left-carousel-arrow" class="fas fa-chevron-left"></i></a>
-                    <a tabindex="0"><i type="button" aria-label="right-carousel-arrow" class="fas fa-chevron-right"></i></a>
+                    <button id="left-carousel-button" aria-label="left arrow button for latests posts carousel">
+                        <i class="fas fa-chevron-circle-left"></i>
+                    </button>
+                    <button id="right-carousel-button" aria-label="right arrow button for latests posts carousel">
+                        <i class="fas fa-chevron-circle-right"></i>
+                    </button>
                 </div>
                 <div id="posts-carousel">
                     <div class="loader">

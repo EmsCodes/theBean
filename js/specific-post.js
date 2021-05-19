@@ -39,8 +39,6 @@ async function fetchPost(){
 
         const modalImage = document.querySelectorAll(".wp-block-image");
         const modalContainer = document.querySelector("#modal-container");
-
-        
         //Creates an Image modal when the user clicks any of the images in the chosen post
 
         for(let i=0; i<modalImage.length; i++){
@@ -49,9 +47,8 @@ async function fetchPost(){
             const modalHtml = 
             `<div class="image-modal"></div>
              <div>
-                <div class="post-image-modal" style="background-image:url(${modalImage[i].childNodes[0].src})">
-                    <i tabindex="0" class="fas fa-times"></i>
-                </div>
+                <div class="post-image-modal" style="background-image:url(${modalImage[i].childNodes[0].src})"></div>
+                <button><i tabindex="0" class="fas fa-times"></i></button>
             </div>`
 
             //adding tabIndex to post images for accessibility
@@ -83,6 +80,8 @@ async function fetchPost(){
     }
     catch(error){
         console.log(error);
+        //creates the error message
+        carouselContainer.innerHTML = errorMessage("error", `The website messed up. Please try to <a href="posts.html" class="reload-link">reload</a> the page.`);
     }
 }
 

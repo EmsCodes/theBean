@@ -24,14 +24,6 @@ h1{
     font-family: var(--main-font);
     font-size:1.9em;
 }
-.read-link{
-    font-family: var(--serif-font);
-    font-size:1.8em;
-    color:#fff;
-    text-align: right;
-    margin-right:25px;
-    margin-top:0px;
-} 
 .center-align{
     text-align: center;
 }
@@ -42,7 +34,7 @@ h1{
     background:url(/images/background-bigger-screen.jpg) 10% 65%/cover no-repeat;
 }
 header{
-    position:static;
+    position:relative;
     z-index: 1;
     display:flex;
     flex-direction: row;
@@ -138,7 +130,7 @@ header .fab {
 .error {
     font-size:1.2em;
     border: 1px solid rgb(82, 0, 0);
-    color: rgb(255, 255, 255);;
+    color: rgb(240, 240, 240);;
     background: rgba(170, 0, 0, 0.898);
     padding: 1em;
     width:200px;
@@ -154,14 +146,25 @@ header .fab {
     height:20px;
     animation: grow 2s ease-in-out infinite;
 }
-/* The middle loading-ring */
+.reload-link{
+    color:#fff;
+    text-decoration: underline;
+    font-style: italic;
+}
+/* ICONS */
 
+/* middle-loader-icon */
 .fa-mug-hot{
     color:var(--green-color);
     font-size: 10px;
     position:absolute;
     left:5px;
     top:4px;
+}
+/* Read-icon */
+.fa-angle-double-right{
+    font-size:0.4em;
+    margin-left:5px;
 }
 
 @keyframes grow {
@@ -180,7 +183,6 @@ header .fab {
 /* Footer */
 footer h5{
     font-size:1.1em;
-    /* text-align: center; */
     font-weight:600;
     margin-top:35px;
 }
