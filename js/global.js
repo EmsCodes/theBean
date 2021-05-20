@@ -56,6 +56,8 @@ function toTopFunction(){
 }
 
 document.addEventListener("scroll", scrollFunction);
+document.addEventListener("touchmove", scrollFunction);
+
 
 toTopBtn.addEventListener("click", toTopFunction)
 toTopBtn.addEventListener("keyup", toTopFunction)
