@@ -54,3 +54,9 @@ p{
     max-width:100%;
     height:auto;
 }
+/* FOOTER*/
+footer{
+    border-top:1px solid var(--green-color);
+    margin: 0px auto;
+    margin-top:75px;
+}

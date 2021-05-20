@@ -28,6 +28,34 @@ function burgerMenu(){
     burgerContainer.classList.toggle("burger-checked");
 }
 
+
 hamburgerMenu.addEventListener("click", burgerMenu);
 hamburgerMenu.addEventListener("keyup", burgerMenu);
 hamburgerMenu.addEventListener("touchend", burgerMenu);
+
+
+// to-top-button on scroll function
+
+const toTopBtn = document.querySelector("#to-top-btn");
+
+
+function scrollFunction() {
+    // checks distance to top and displays or hides toTopBtn
+    if (document.documentElement.scrollTop > 400) {
+        toTopBtn.style.display = "block";
+    } else {
+        toTopBtn.style.display = "none";
+    }
+}
+
+function toTopFunction(){
+    // brings user to the top of the page
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+
+}
+
+document.addEventListener("scroll", scrollFunction);
+
+toTopBtn.addEventListener("click", toTopFunction)
+toTopBtn.addEventListener("keyup", toTopFunction)

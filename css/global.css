@@ -71,7 +71,7 @@ nav{
 nav ul li{
     list-style-type:none;
     margin-top:40px;
-    margin-left:20%;
+    margin-left:10%;
     animation: nav-delay-animation 1s ease-in-out;
 }
 @keyframes nav-delay-animation{
@@ -95,7 +95,7 @@ nav a{
 #hamburger-menu {
     display:none;
 }
-#hamburger-menu:checked ~ nav { 
+#hamburger-menu:checked ~ nav {
     display:block;
 }
 /* burger-menu */
@@ -145,7 +145,26 @@ header .fab {
     cursor: pointer;
     transition: all 0.2s ease;
 }
-
+/* to-top-button(on scroll)*/
+#to-top-btn{
+    display:none;
+    border:none;
+    background-color: var(--main-brown-color);
+    color:#fff;
+    font-size:1em;
+    border-radius: 5px;
+    padding:15px 15px;
+    position:fixed;
+    z-index: 100;
+    right:10px;
+    bottom:15vh;
+    cursor: pointer;
+    transform-style:all 2s ease-in-out;
+}
+#to-top-btn:hover{
+    width:100px;
+    padding:10px 15px;
+}
 /* Error message and loader animation */
 .error {
     font-size:1.2em;
@@ -334,7 +353,7 @@ footer .fab{
         font-size:1.2em;
         font-weight: 300;
     }
-}    
+}
 @media (min-width:1150px){
     header{
         position:sticky;
@@ -346,7 +365,7 @@ footer .fab{
         display:none;
     }
     #menu-and-icons{
-        margin-right:5%;   
+        margin-right:5%;
     }
     #logo{
         max-width:170px;

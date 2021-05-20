@@ -6,12 +6,16 @@ const params = new URLSearchParams(queryString);
 
 const id = params.get("id");
 
+const footer = document.querySelector("footer");
+
+
 
 const url = "https://makra-stenkloev.no/thebean/wp-json/wp/v2/posts/" + id + "?_embed";
 
 async function fetchPost(){
 
-    postContainer.innerHTML="";
+    footer.style.marginTop = "650px";
+    // gives the footer distance when loading icon is active
 
     try{
 
@@ -24,10 +28,12 @@ async function fetchPost(){
         const featuredImage = posts._embedded["wp:featuredmedia"][0].source_url;
         const altImageText = posts._embedded["wp:featuredmedia"][0].alt_text;
 
+        footer.style.marginTop = "75px";
+        // changes the top margin back after URL fetch
 
         //creates the HTML/content based on the ID of the post the user have chosen
         
-        postContainer.innerHTML += 
+        postContainer.innerHTML = 
         `<div class="blog-post">
             <h1>${posts.title.rendered}</h1>
             <p class="date">Posted:${posts.date}</p>
@@ -39,10 +45,11 @@ async function fetchPost(){
 
         const modalImage = document.querySelectorAll(".wp-block-image");
         const modalContainer = document.querySelector("#modal-container");
+
         //Creates an Image modal when the user clicks any of the images in the chosen post
 
         for(let i=0; i<modalImage.length; i++){
-
+            modalImage.innerHTML += `<i class="fas fa-expand"></i>`;
             //variable for the modal HTML
             const modalHtml = 
             `<div class="image-modal"></div>

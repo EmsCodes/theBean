@@ -78,7 +78,11 @@ h3{
 }
 
 /* FOOTER */
-
+footer{
+    border-top:1px solid var(--green-color);
+    margin: 0px auto;
+    margin-top:75px;
+}
 
 /* MEDIA QUERIES */
 
