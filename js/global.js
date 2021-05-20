@@ -30,3 +30,4 @@ function burgerMenu(){
 
 hamburgerMenu.addEventListener("click", burgerMenu);
 hamburgerMenu.addEventListener("keyup", burgerMenu);
+hamburgerMenu.addEventListener("touchend", burgerMenu);
