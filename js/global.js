@@ -49,6 +49,7 @@ function scrollFunction() {
 }
 
 function toTopFunction(){
+    
     // brings user to the top of the page
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -61,3 +62,6 @@ document.addEventListener("touchmove", scrollFunction);
 
 toTopBtn.addEventListener("click", toTopFunction)
 toTopBtn.addEventListener("keyup", toTopFunction)
+
+
+console.log(document.body);

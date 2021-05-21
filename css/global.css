@@ -5,14 +5,13 @@
 :root{
     --main-brown-color:#61310F;
     --dark-brown-color:#130a03;
-    --green-color:#3B543D;
+    --green-color:#49654B;
     --subheading-color:#373737;
+    --second-contrast-white-text:rgb(220,220, 220);
     --brown-linear-gradient:linear-gradient(0deg, rgba(68,35,14,1) 13%, rgba(42,21,5,1) 78%);
     --box-shadow:3px 3px 15px rgb(0, 0, 0);
-
     --main-font:'Antonio', tahoma, sans-serif;
     --serif-font:'Tangerine', georgia, serif;
-
 }
 
 /* headings/body/main*/
@@ -45,7 +44,6 @@ header{
     max-width:135px;
     height:40px;
     margin-left:40px;
-    padding-top:5px;
 }
 nav{
     font-family: var(--main-font);
@@ -55,7 +53,7 @@ nav{
     display:none;
     right:0;
     left:0;
-    top:65px;
+    top:60px;
     padding-bottom:35px;
     background: var(--brown-linear-gradient);
     animation: drop-down-menu 0.2s ease-in 1;
@@ -65,7 +63,7 @@ nav{
         top:0;
     }
     to{
-        top:65px;
+        top:60px;
     }
 }
 nav ul li{
@@ -104,7 +102,7 @@ nav a{
     transition: 0.5s;
 }
 .burger-checked{
-    margin-right:25px;
+    margin-right:30px;
 }
 .bar1, .bar2, .bar3{
     width: 35px;
@@ -132,9 +130,11 @@ header .fab {
 
 .cta:hover{
     background-color:var(--green-color);
+    transform: scale(1.05);
 }
 .cta{
     font-size: 1em;
+    width:150px;
     margin-top:50px;
     padding:15px;
     background-color:var(--main-brown-color);
@@ -145,25 +145,31 @@ header .fab {
     cursor: pointer;
     transition: all 0.2s ease;
 }
+.cta .fa-angle-double-right{
+    font-size:1em;
+}
 /* to-top-button(on scroll)*/
 #to-top-btn{
     display:none;
     border:none;
-    background-color: var(--main-brown-color);
+    background-color: #5c825f;
     color:#fff;
     font-size:1em;
-    border-radius: 5px;
-    padding:15px 15px;
+    border-radius: 2px;
+    padding:10px 10px 15px 10px;
     position:fixed;
     z-index: 100;
-    right:10px;
-    bottom:15vh;
+    right:0;
+    bottom:25vh;
     cursor: pointer;
-    transform-style:all 2s ease-in-out;
+    transition:all 0.3s ease-in-out;
 }
 #to-top-btn:hover{
     width:100px;
-    padding:10px 15px;
+}
+#to-top-btn p{
+    margin-top:0px;
+    margin-bottom:0px;
 }
 /* Error message and loader animation */
 .error {
@@ -308,7 +314,6 @@ footer .fab{
     nav{
         font-size:1.8em;
         left:50%;
-        top:65px;
     }
     @keyframes drop-down-menu{
         from{
@@ -319,16 +324,10 @@ footer .fab{
         }
     }
 }
-@media (min-width:600px){
-    nav{
-        top:70px;
-    }
-    #logo{
-        max-width:152px;
-        height:45px;
-        }
-}
 @media (min-width:700px){
+    .cta{
+        width:200px;
+    }
     /* FOOTER*/
     #footer-container{
         display:flex;
@@ -359,17 +358,16 @@ footer .fab{
         position:sticky;
         padding-top:0px;
         justify-content:space-between;
-        padding-top:20px;
     }
     header label{
         display:none;
     }
     #menu-and-icons{
         margin-right:5%;
+        display:flex;
     }
     #logo{
-        max-width:170px;
-        height:55px;
+        margin-top:20px;
     }
     nav{
         font-size:1.4em;
@@ -377,7 +375,7 @@ footer .fab{
         display:inline-block;
         background: none;
         padding-bottom:0px;
-        padding-top:10px;
+        margin-top:20px;
     }
     nav ul li{
         display:inline;
@@ -397,7 +395,7 @@ footer .fab{
         color:#fff;
         font-size: 1.4em;
         padding:5px;
-        margin-bottom:25px;
+        margin-top:20px;
     }
     header .fab:hover{
         transform:scale(1.05);

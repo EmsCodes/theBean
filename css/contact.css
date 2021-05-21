@@ -2,6 +2,9 @@ header{
     position: relative;
     z-index: 3;
 }
+h1{
+    font-size: 2em;
+}
 main{
     position: relative;
     padding-top:35px;
@@ -23,7 +26,6 @@ main::before{
 }
 fieldset{
     font-family: var(--main-font);
-    font-size:1.2em;
     position:relative;
     z-index:2;
     border:none;
@@ -42,7 +44,9 @@ textarea{
     height:125px;
     width:100%;   
 }
-
+main label{
+    font-size:1.2em;
+}
 /* form error message*/
 
 .form-error {

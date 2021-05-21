@@ -59,7 +59,7 @@ async function fetchPosts(){
 
                     blogPostBackground.forEach(function() {
         
-                    blogPostBackground[i].style.backgroundColor = "#3B543D";
+                    blogPostBackground[i].style.backgroundColor = "#49654B";
         
                 });
             }
@@ -105,7 +105,7 @@ morePostsButton.addEventListener("click", async function(){
                                     <h3>${posts[i].title.rendered}</h3>
                                     <p class="date">(${posts[i].date})</p>
                                     <div class="description">${posts[i].excerpt.rendered}</div>
-                                    <p class="read-link">read></p>
+                                    <p class="read-link">read<i class="fas fa-angle-double-right"></i></p>
                                 </div>
                             </div>
                         </a>`;
@@ -117,7 +117,7 @@ morePostsButton.addEventListener("click", async function(){
                     
                             blogPostBackground.forEach(function() {
                 
-                            blogPostBackground[i].style.backgroundColor = "#3B543D";
+                            blogPostBackground[i].style.backgroundColor = "#49654B";
                             });
 
                 morePostsButton.style.display = "none";            

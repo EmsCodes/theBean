@@ -271,6 +271,9 @@ a{
         margin:0px auto;
         row-gap:15px;
     }
+    #index-bottom-background::before{
+        background: url(/images/index-bottom-background.jpg) center/cover no-repeat;
+    }
     .post-container{
         max-width:200px;
         height:275px;
@@ -308,7 +311,7 @@ a{
         padding-bottom:250px;
     }
     #index-background-image{
-        background:url(/images/background-big-screen-cropped.jpg) 45%/cover no-repeat;
+        background:url(/images/background-big-screen-cropped.jpg) 37%/cover no-repeat;
     }
     #posts-carousel{
         width:85%;

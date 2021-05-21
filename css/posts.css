@@ -4,26 +4,27 @@ h1{
     margin-top:35px;
 }
 h2{
-    font-family:var(--serif-font);
     font-size:2em;
-    font-weight:600;
-    font-style:italic;
+}
+#add-serif-font{
+    font-size: 1.7em;
+}
+h2, #add-serif-font{
+    font-family:var(--serif-font);
+    color:var(--main-brown-color);
+    font-weight:bold;
 }
 a{
     text-decoration: none;
 }
- #more-posts-button{
+/* More posts button/cta */
+#more-posts-button{
      margin-top:50px;
      text-align: center;
-} 
-.top-text-width{
-    border-bottom:2px solid var(--green-color);
-    padding-bottom:25px;
 }
-#add-serif-font{
-    font-family: var(--serif-font);
-    font-size: 1.7em;
-    font-weight: bold;
+.top-text-width{
+    border-bottom:1px solid var(--green-color);
+    padding-bottom:5px;
 }
 /* Blogpost-container/posts */
 h3{
@@ -34,11 +35,12 @@ h3{
     margin-bottom:0px;
 }
 .container-text-width, .top-text-width{
-    max-width:85%;
+    width:85%;
+    max-width: 600px;
     margin:0px auto;
 }
 .description{
-    color:#fff;
+    color:var(--second-contrast-white-text);
     text-decoration: none;
 }
 .blog-list-container{
@@ -50,6 +52,7 @@ h3{
 .brown-post-container{
     background-color:var(--main-brown-color);
     padding-bottom:15px;
+    align-items: flex-start;
 }
 .featured-image{
     width: 100%;
@@ -59,10 +62,10 @@ h3{
     background-repeat: no-repeat;
 }
 .date{
-    font-style: italic;
-    font-size:0.9em;
+    font-family: var(--main-font);
+    font-size:1em;
     font-weight:200;
-    color:#fff;
+    color:var(--second-contrast-white-text);
     margin-top:0px;
 }
 /* read-link */
@@ -71,19 +74,18 @@ h3{
     font-size:2.2em;
     font-style:italic;
     font-weight: 200;
-    color:rgb(220, 220, 220);
+    color:var(--second-contrast-white-text);
     text-align: right;
     margin-right:15px;
     margin-top:5px;
+    border-bottom:1px inset var(--second-contrast-white-text);
 }
-
 /* FOOTER */
 footer{
     border-top:1px solid var(--green-color);
     margin: 0px auto;
     margin-top:75px;
 }
-
 /* MEDIA QUERIES */
 
 @media only screen and (min-width:450px){
