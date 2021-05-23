@@ -41,7 +41,7 @@ const toTopBtn = document.querySelector("#to-top-btn");
 
 function scrollFunction() {
     // checks distance to top and displays or hides toTopBtn
-    if (document.documentElement.scrollTop > 400) {
+    if (document.documentElement.scrollTop > 750) {
         toTopBtn.style.display = "block";
     } else {
         toTopBtn.style.display = "none";
@@ -49,7 +49,6 @@ function scrollFunction() {
 }
 
 function toTopFunction(){
-    
     // brings user to the top of the page
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -62,6 +61,3 @@ document.addEventListener("touchmove", scrollFunction);
 
 toTopBtn.addEventListener("click", toTopFunction)
 toTopBtn.addEventListener("keyup", toTopFunction)
-
-
-console.log(document.body);

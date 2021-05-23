@@ -1,9 +1,10 @@
 main{
-    width:85%;
-    max-width: 850px;
+    /* width:85%; */
+    max-width: 600px;
     margin:0px auto;
 }
 h1{
+    font-size:2.2em;
     margin-top:35px;
     font-weight: 100;
 }
@@ -22,9 +23,10 @@ section h2, section p{
     color:#fff;
     margin-left:5%;
 }
-.content-width{
-    max-width:850px;
-    margin-bottom:2.5em;
+.section-1{
+    width:85%;
+    margin:0px auto;
+    margin-bottom: 75px;
 }
 blockquote{
     font-size: 2em;
@@ -44,14 +46,15 @@ blockquote{
     color:var(--main-brown-color);
 }
 p{
-    max-width:85%;
+    width:85%;
+    max-width:600px;
 }
 #cappuccino-image{
     width:100%;
     height:auto;
 }
 #blogger-image{
-    max-width:100%;
+    width:100%;
     height:auto;
 }
 /* FOOTER*/
@@ -59,4 +62,17 @@ footer{
     border-top:1px solid var(--green-color);
     margin: 0px auto;
     margin-top:75px;
+}
+@media (min-width:700px){
+    #blogger-image{
+        max-width:500px;
+        height:auto;
+    }
+    section{
+        background-color:var(--main-brown-color);
+        color:#fff;
+        padding-bottom:2em;
+        width:85%;
+        margin:0px auto;
+    }
 }

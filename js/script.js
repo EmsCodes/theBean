@@ -3,6 +3,9 @@ const url = "https://makra-stenkloev.no/thebean/wp-json/wp/v2/posts?_embed";
 const carouselContainer = document.querySelector("#posts-carousel");
 const rightArrow = document.querySelector("#right-carousel-button");
 const leftArrow = document.querySelector("#left-carousel-button");
+const indicator1 = document.querySelector(".dot-indicator-one");
+const indicator2 = document.querySelector(".dot-indicator-two");
+
 
 
 async function fetchPosts(){
@@ -14,9 +17,12 @@ async function fetchPosts(){
 
         const posts = json;
 
-        // only displays left arrow after right arrow have been pressed (See righArrowFunction below)
+        // only displays right arrow after left arrow have been pressed (See righArrowFunction below)
         leftArrow.style.display = "none";
         rightArrow.style.display = "block";
+        //background-color on dot-indicators
+        indicator1.style.background = "rgb(15, 15, 15)";
+        indicator2.style.background = "rgb(50, 50, 50)";
 
         // empty the container when json gets fetched
         carouselContainer.innerHTML = "";
@@ -82,9 +88,13 @@ async function rightArrowFunction(){
                     const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;  
         
                     if((i>=4) && (i<=7)){
-        
+
+                    // only displays left arrow after right arrow have been pressed (See righArrowFunction below)    
                     leftArrow.style.display = "block";
                     rightArrow.style.display = "none";
+                    //background-color on dot-indicators
+                    indicator1.style.background = "rgb(50, 50, 50)";
+                    indicator2.style.background = "rgb(15, 15, 15)";
         
                     carouselContainer.innerHTML += 
                         `<a href="specific-post.html?id=${posts[i].id}">

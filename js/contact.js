@@ -43,7 +43,7 @@ function validateForm(event){
 
 // Response for submitted message
 function mainHtml(){
-
+    
     const mainContent = document.querySelector("main"); 
 
     if(checkLength(fullName.value, 5) && checkLength(contactMessage.value, 25) && checkLength(subject.value, 15) && emailValidation(email.value) === true){
@@ -52,14 +52,14 @@ function mainHtml(){
         `<div id="message-response-text">
             <h1>Thank you for your message!</h1>
             <p>You will normally receive an answer within a few hours.</p>
-            <p><span>Endre</span></p>
+            <p><span>- Endre</span></p>
             <div class="center-align">
                 <a href="posts.html">
                     <button class="cta" type="button">Back to posts</button>
                 </a>
             </div>
         </div>`
-        
+
     }else{
         console.log("Nope!");
     }

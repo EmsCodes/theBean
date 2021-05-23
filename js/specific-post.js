@@ -1,14 +1,9 @@
 const postContainer = document.querySelector("#chosen-post-container");
-
 const queryString = document.location.search;
-
 const params = new URLSearchParams(queryString);
-
 const id = params.get("id");
 
 const footer = document.querySelector("footer");
-
-
 
 const url = "https://makra-stenkloev.no/thebean/wp-json/wp/v2/posts/" + id + "?_embed";
 
@@ -32,7 +27,7 @@ async function fetchPost(){
         // changes the top margin back after URL fetch
 
         //creates the HTML/content based on the ID of the post the user have chosen
-        
+
         postContainer.innerHTML = 
         `<div class="blog-post">
             <h1>${posts.title.rendered}</h1>
@@ -43,13 +38,17 @@ async function fetchPost(){
             </div>
         </div>`;
 
-        const modalImage = document.querySelectorAll(".wp-block-image");
+        // changes the title based on the blogpost
+        let pageTitle = document.querySelector("title");
+        pageTitle.innerHTML += posts.title.rendered;
+
+        console.log(document.title);
+        const modalImage = document.querySelectorAll("figure");
         const modalContainer = document.querySelector("#modal-container");
 
         //Creates an Image modal when the user clicks any of the images in the chosen post
 
         for(let i=0; i<modalImage.length; i++){
-            modalImage.innerHTML += `<i class="fas fa-expand"></i>`;
             //variable for the modal HTML
             const modalHtml = 
             `<div class="image-modal"></div>

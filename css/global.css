@@ -7,6 +7,7 @@
     --dark-brown-color:#130a03;
     --green-color:#49654B;
     --subheading-color:#373737;
+    --dark-gray-icon-color:rgb(28, 28, 28);
     --second-contrast-white-text:rgb(220,220, 220);
     --brown-linear-gradient:linear-gradient(0deg, rgba(68,35,14,1) 13%, rgba(42,21,5,1) 78%);
     --box-shadow:3px 3px 15px rgb(0, 0, 0);
@@ -152,24 +153,23 @@ header .fab {
 #to-top-btn{
     display:none;
     border:none;
-    background-color: #5c825f;
+    background: var(--brown-linear-gradient);
     color:#fff;
     font-size:1em;
     border-radius: 2px;
-    padding:10px 10px 15px 10px;
+    padding:15px 20px 20px 15px;
     position:fixed;
     z-index: 100;
     right:0;
-    bottom:25vh;
+    bottom:10vh;
     cursor: pointer;
-    transition:all 0.3s ease-in-out;
 }
 #to-top-btn:hover{
     width:100px;
 }
 #to-top-btn p{
-    margin-top:0px;
-    margin-bottom:0px;
+    display: block;
+    margin:0px auto;
 }
 /* Error message and loader animation */
 .error {
@@ -197,6 +197,23 @@ header .fab {
     font-style: italic;
 }
 /* ICONS */
+
+/* social icons */
+.fa-facebook:hover{
+    color:#fff;
+    background: #3B5998;
+    border-radius: 5px;
+}
+.fa-instagram:hover{
+    background:linear-gradient(45deg, #405DE6, #5851DB, #833AB3, #C13584, #E1306C, #FD1D1D);
+    color:#fff;
+    border-radius: 5px;
+}
+.fa-youtube:hover{
+    background:#FF0000;
+    color:#fff;
+    border-radius: 5px;
+}
 
 /* middle-loader-icon */
 .fa-mug-hot{
@@ -247,7 +264,6 @@ footer{
 }
 #footer-nav ul{
     list-style-type: none;
-    color:#000;
     text-align: start;
 }
 #footer-nav ul li{
@@ -259,7 +275,7 @@ footer{
 }
 #footer-nav a{
     color:#000;
-    text-decoration: none;
+    text-decoration:none;
 }
 #footer-logo{
     max-width:145px;
@@ -367,7 +383,9 @@ footer .fab{
         display:flex;
     }
     #logo{
-        margin-top:20px;
+        max-width:185px;
+        height:50px;
+        margin-top:10px;
     }
     nav{
         font-size:1.4em;
@@ -397,11 +415,19 @@ footer .fab{
         padding:5px;
         margin-top:20px;
     }
-    header .fab:hover{
-        transform:scale(1.05);
-    }
     footer{
         width:50%;
         max-width:750px;
     }
-};
+}
+@media (min-width:1200px){
+    #to-top-btn{
+        background:var(--green-color);
+        right:20px;
+        bottom:10vh;
+    }
+    #to-top-btn:hover{
+        width:125px;
+        padding:10px 15px;
+    }
+}

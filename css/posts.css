@@ -1,5 +1,5 @@
 h1{
-    font-size:1.9em;
+    font-size:2.2em;
     font-weight: 400;
     margin-top:35px;
 }
@@ -78,7 +78,11 @@ h3{
     text-align: right;
     margin-right:15px;
     margin-top:5px;
-    border-bottom:1px inset var(--second-contrast-white-text);
+    border-bottom:1px inset rgba(255, 255, 255, 0.207);
+}
+/* more posts arrow icon */
+.fa-angle-double-down{
+    margin-left:5px;
 }
 /* FOOTER */
 footer{

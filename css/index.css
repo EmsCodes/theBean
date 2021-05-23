@@ -82,8 +82,12 @@ a{
     transition: "background-color" 1s ease-in-out;
     box-shadow: var(--box-shadow);
 }
-
-/* index CTA animation */
+.index-cta:hover{
+    background-color: var(--green-color);
+    animation-name:none;
+    border-color:#ffffff00;
+    transform:scale(1.05);
+}
 @keyframes background-opacity-cta {
     0%{
         background-color:#0000009e;
@@ -94,12 +98,6 @@ a{
     100%{
         background-color:#0000009e;
     }
-}
-.index-cta:hover{
-    background-color: var(--green-color);
-    animation-name:none;
-    border-color:#ffffff00;
-    transform:scale(1.05);
 }
 #index-cta-padding{
     padding-bottom:75px;
@@ -140,7 +138,7 @@ a{
     background-repeat: no-repeat;
 }
 .fa-chevron-circle-left, .fa-chevron-circle-right{
-    color:rgb(28, 28, 28);
+    color:var(--dark-gray-icon-color);
     cursor: pointer;
     font-size: 3em;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.494);
@@ -164,6 +162,22 @@ a{
 #left-carousel-button{
     display:none;
 }
+.dot-indicator-one, .dot-indicator-two{
+    position:relative;
+    z-index: 2;
+    border-radius: 50%;
+    width:15px;
+    height:15px;
+    margin:0px auto;
+}
+#dot-indicator-container{
+    display:flex;
+    justify-content: space-around;
+    width:65px;
+    margin:0px auto;
+    margin-top:20px;
+} 
+
 /* read-link */
 .read-link{
     font-family: var(--serif-font);
@@ -255,6 +269,10 @@ a{
         height:20%;
         font-size:1.4em;
     }
+    .dot-indicator-one, .dot-indicator-two{
+        width:18px;
+        height:18px;
+    }
     /* index-cta */
     .index-cta {
         font-size:1.4em;
@@ -304,8 +322,9 @@ a{
        font-size:1.6em;
     }
     #logo{
-        background-color:#130a039e;
+        background-color:#0000009e;
         border-radius: 2px;
+        padding:5px;
     }
     #index-cta-padding{
         padding-bottom:250px;
