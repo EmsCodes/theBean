@@ -43,11 +43,10 @@ h2{
 }
 h3{
     font-family: var(--main-font);
-    position: relative;
     font-size:1.6em;
     margin-top:0px;
     padding:20px;
-    font-weight:800;
+    font-weight:400;
     text-transform: capitalize;
 }
 h4{
@@ -138,7 +137,7 @@ a{
     background-repeat: no-repeat;
 }
 .fa-chevron-circle-left, .fa-chevron-circle-right{
-    color:var(--dark-gray-icon-color);
+    color:var(--dark-gray-color);
     cursor: pointer;
     font-size: 3em;
     text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.494);
@@ -308,7 +307,7 @@ a{
         margin-top:150px;
     }
     h1{
-        font-size:4.5em;
+        font-size:4em;
         width:45%;
     }
     h2{
@@ -330,7 +329,7 @@ a{
         padding-bottom:250px;
     }
     #index-background-image{
-        background:url(/images/background-big-screen-cropped.jpg) 37%/cover no-repeat;
+        background:url(/images/background-big-screen-cropped.jpg) 60%/cover no-repeat;
     }
     #posts-carousel{
         width:85%;
@@ -347,6 +346,9 @@ a{
 }
 @media only screen and (min-width:1600px){
     h1{
-        width:35%;
+        width:30%;
+    }
+    #index-background-image{
+        background:url(/images/background-big-screen-cropped.jpg) 35%/cover no-repeat;
     }
 }
