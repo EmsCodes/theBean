@@ -14,7 +14,9 @@
     --main-font:'Antonio', tahoma, sans-serif;
     --serif-font:'Tangerine', georgia, serif;
 }
-
+*{
+    scroll-behavior: smooth;
+}
 /* headings/body/main*/
 body{
     margin:0px auto;
@@ -243,13 +245,15 @@ header .fab {
 }
 
 /* Footer */
-footer h5, footer h4 {
-    font-size:1.1em;
+footer h5, footer h4, footer h3, footer h2 {
+    font-size:1.2em;
     font-weight:600;
+    text-align: center;
     margin-top:35px;
 }
 footer{
     max-width:90%;
+    margin:0 auto;
     font-family: var(--main-font);
 }
 #footer-container{
@@ -262,7 +266,7 @@ footer{
     font-size:1.2em;
     border-left:2px solid var(--main-brown-color);
 }
-#footer-nav ul{
+#footer-nav ul{ 
     list-style-type: none;
     text-align: start;
 }
@@ -287,6 +291,8 @@ footer{
 form{
     margin:0px auto;
     color:var(--subheading-color);
+    display:flex;
+    flex-direction: column;
 }
 label::after{
     content:"";
@@ -294,13 +300,14 @@ label::after{
 }
 footer button{
     letter-spacing:1px;
-    margin-left:10px;
     border-radius: 2px;
-    padding:10px;
+    padding:10px 0;
+    margin-top:15px;
     background-color:var(--main-brown-color);
     border:none;
     color:#fff;
     cursor: pointer;
+    width:100px;
     transition: all 0.2s ease;
 }
 footer button:hover{
@@ -358,8 +365,9 @@ footer .fab{
     footer .fab{
         font-size: 1.8em;
     }
-    footer h5, footer h4 {
+    footer h5, footer h4, footer h3, footer h2 {
         font-size:1.5em;
+        margin-top:0;
     }
     #footer-nav{
         font-size:1.5em;

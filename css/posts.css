@@ -44,114 +44,112 @@ h3{
     text-decoration: none;
 }
 .blog-list-container{
-     padding-top:50px;  
-     height:100%;
-     display:flex;
-     flex-direction:column;
+    padding-top:50px;  
+    height:100%;
+    display:flex;
+    flex-direction:column;
 }
 .brown-post-container{
-    background-color:var(--main-brown-color);
-    padding-bottom:15px;
-    align-items: flex-start;
+   background-color:var(--main-brown-color);
+   padding-bottom:15px;
+   align-items: flex-start;
+   margin:0 auto;
+   margin-bottom:25px;
+   width:75%;
 }
 .featured-image{
-    width: 100%;
-	height:225px;
-	background-position: top;
-	background-size: cover;
-    background-repeat: no-repeat;
+   width: 100%;
+   height:225px;
+   background-position: top;
+   background-size: cover;
+   background-repeat: no-repeat;
 }
 .date{
-    font-family: var(--main-font);
-    font-size:1em;
-    font-weight:200;
-    color:var(--second-contrast-white-text);
-    margin-top:0px;
+   font-family: var(--main-font);
+   font-size:1em;
+   font-weight:200;
+   color:var(--second-contrast-white-text);
+   margin-top:0px;
 }
 /* read-link */
 .read-link{
-    font-family: var(--serif-font);
-    font-size:2.2em;
-    font-style:italic;
-    font-weight: 200;
-    color:var(--second-contrast-white-text);
-    text-align: right;
-    margin-right:15px;
-    margin-top:5px;
-    border-bottom:1px inset rgba(255, 255, 255, 0.207);
+   font-family: var(--serif-font);
+   font-size:2.2em;
+   font-style:italic;
+   font-weight: 200;
+   color:var(--second-contrast-white-text);
+   text-align: right;
+   margin-right:15px;
+   margin-top:5px;
+   border-bottom:1px inset rgba(255, 255, 255, 0.207);
 }
 /* more posts arrow icon */
 .fa-angle-double-down{
-    margin-left:5px;
+   margin-left:5px;
 }
 /* FOOTER */
 footer{
-    border-top:1px solid var(--green-color);
-    margin: 0px auto;
-    margin-top:75px;
+   border-top:1px solid var(--green-color);
+   margin: 0px auto;
+   margin-top:75px;
 }
 /* MEDIA QUERIES */
 
 @media only screen and (min-width:450px){
 
-    .container-text-width, .top-text-width{
-        max-width:75%;
-    }
-    .featured-image{
-        height:300px;
-    }
+   .container-text-width, .top-text-width{
+       max-width:75%;
+   }
+   .featured-image{
+       height:300px;
+   }
 }
-@media only screen and (min-width:550px){
-    .blog-list-container{
-        flex-flow:row wrap;
-    }
-    .brown-post-container{
-        max-width:50vw;
-        height:100%;
-        padding-bottom:0px;
-    }
-    .featured-image{
-        width: 100%;
-        height:225px;
-    }
+@media only screen and (min-width:600px){
+   .blog-list-container{
+       flex-flow:row wrap;
+       row-gap: 15px;
+   }
+   .brown-post-container{
+       width:85%;
+       max-width:50vw;
+       height:100%;
+       padding-bottom:0px;
+   }
+   .featured-image{
+       width: 100%;
+       height:225px;
+   }
 }
 @media only screen and (min-width:900px){
-
-    .brown-post-container{
-        max-width:33.3vw;
-        padding-bottom:0px;
-    }
-    .top-text-width{
-        max-width: 50%;
-        margin-left:10%;
-    }
-}
-
-@media only screen and (min-width:900px){
-    .brown-post-container{
-        max-width:33.33vw;
-        padding-bottom:0px;
-    }
+   .top-text-width{
+       max-width: 50%;
+       margin-left:10%;
+   }
+   .brown-post-container{
+       max-width:400px;
+       padding-bottom:0px;
+       margin:0;
+   }
 }
 @media only screen and (min-width:1200px){
-    main{
-        width:85%;
-        max-width:1280px;
-        margin:0px auto;
-    }
-    h3{
-        margin-top:35px;
-    }
-    .brown-post-container{
-        transition: all 0.2s ease-in-out;
-        max-width:325px;
-    }
-    .brown-post-container:hover{
-        box-shadow: 4px 4px 25px 4px rgba(0, 0, 0, 0.487);
-        transform:scale(1.02);
-    }
-    .blog-list-container{
-        justify-content: space-evenly;
-        row-gap: 50px;
-    }
+   main{
+       width:85%;
+       max-width:1280px;
+       margin:0px auto;
+   }
+   h3{
+       margin-top:35px;
+   }
+   .brown-post-container{
+       transition: all 0.2s ease-in-out;
+       max-width:375px;
+   }
+   .brown-post-container:hover{
+       box-shadow: 4px 4px 25px 4px rgba(0, 0, 0, 0.487);
+       transform:scale(1.02);
+   }
+   .blog-list-container{
+       justify-content: space-evenly;
+       row-gap: 50px;
+   }
 }
