@@ -95,7 +95,7 @@ morePostsButton.addEventListener("click", async function(){
             const featuredImage = posts[i]._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
             const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;  
 
-            if(i<=11){
+            i = i++;
 
                 blogPostsContainer.innerHTML += 
                         `<a href="specific-post.html?id=${posts[i].id}">
@@ -121,7 +121,6 @@ morePostsButton.addEventListener("click", async function(){
                             });
 
                 morePostsButton.style.display = "none";            
-            }
         }
     }
 }
