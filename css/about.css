@@ -1,6 +1,6 @@
 main{
-    /* width:85%; */
-    max-width: 1200px;
+    width:85%;
+    max-width: 900px;
     margin:0px auto;
 }
 h1{
