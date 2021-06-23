@@ -27,7 +27,8 @@ h1{
     font-size:1.9em;
 }
 .center-align{
-    text-align: center;
+    text-align:center;
+    margin: 0 auto;
 }
 
 /* header (logo, drop-down menu) CTA*/

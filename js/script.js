@@ -21,8 +21,8 @@ async function fetchPosts(){
         leftArrow.style.display = "none";
         rightArrow.style.display = "block";
         //background-color on dot-indicators
-        // indicator1.style.background = "rgb(15, 15, 15)";
-        // indicator2.style.background = "rgb(50, 50, 50)";
+        indicator1.style.background = "rgb(15, 15, 15)";
+        indicator2.style.background = "rgb(50, 50, 50)";
 
         // empty the container when json gets fetched
         carouselContainer.innerHTML = "";
@@ -43,6 +43,8 @@ async function fetchPosts(){
             if(checkForUndefined(altImageText)){
                 altImageText = "We are sorry, but the alt image text is missing";
             } 
+
+            if(i<=3){ 
             
             carouselContainer.innerHTML += 
                 `<a href="specific-post.html?id=${posts[i].id}">
@@ -51,7 +53,8 @@ async function fetchPosts(){
                         <h4>${postTitle}</h4>
                         <p class="read-link">read<i class="fas fa-angle-double-right"></i></p> 
                     </div>
-                </a>`;  
+                </a>`;    
+            }    
         }
          
     }   
@@ -60,7 +63,7 @@ async function fetchPosts(){
         // gets rid of grid to center the error message
         carouselContainer.style.grid = "none";
         //creates the error message
-        carouselContainer.innerHTML = errorMessage("error", `The website messed up. Please try to <a href="index.html" class="reload-link">reload</a> the page.`);
+        carouselContainer.innerHTML = errorMessage("error", `The website messed up. Please try to <a href="posts.html" class="reload-link">reload</a> the page.`);
     }
 
 }
@@ -85,12 +88,13 @@ async function rightArrowFunction(){
                     const altImageText = posts[i]._embedded["wp:featuredmedia"][0].alt_text;  
         
                     if((i>=4) && (i<=7)){
+
                     // only displays left arrow after right arrow have been pressed (See righArrowFunction below)    
                     leftArrow.style.display = "block";
                     rightArrow.style.display = "none";
                     //background-color on dot-indicators
-                    // indicator1.style.background = "rgb(50, 50, 50)";
-                    // indicator2.style.background = "rgb(15, 15, 15)";
+                    indicator1.style.background = "rgb(50, 50, 50)";
+                    indicator2.style.background = "rgb(15, 15, 15)";
         
                     carouselContainer.innerHTML += 
                         `<a href="specific-post.html?id=${posts[i].id}">
@@ -119,5 +123,3 @@ rightArrow.onkeyup = rightArrowFunction;
 // eventlisteners for posts-carousel right arrow button, with function for fetching/creating html
 leftArrow.addEventListener("click", fetchPosts);
 leftArrow.onkeyup = fetchPosts;
-
-
