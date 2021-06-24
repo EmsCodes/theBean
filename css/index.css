@@ -116,7 +116,7 @@ a{
     grid-template-columns: 1fr 1fr;
     margin:0px auto;
     margin-top:10px;
-    gap:15px;
+    gap:30px;
 }
 .post-container{
     max-width:175px;
