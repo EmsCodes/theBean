@@ -57,13 +57,22 @@ h4{
     margin-bottom:20px;
     color:var(--subheading-color);
 }
+#enjoy-paragraph{
+    width:85%;
+    margin: 0 auto;
+    font-family: var(--serif-font);
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-top: 35px;
+    color:var(--green-color);
+}
 /* back link */
 #back-link{
     display: block;
     text-decoration: none;
     font-family: var(--main-font);
     color:var(--subheading-color);
-    margin-top:25px;
+    margin-top:50px;
     margin-left:15px;
 }
 #back-link:hover{
